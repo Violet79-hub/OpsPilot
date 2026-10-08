@@ -1,0 +1,16 @@
+{
+  "verified_at": "2026-10-07T23:55:50.916Z",
+  "compiled_worker": true,
+  "checks": [
+    "Production Worker imports and starts in workerd",
+    "D1 bindings and schema work in compiled build",
+    "Compiled LangGraph produces correct restocking-fee result",
+    "Homepage server-renders successfully",
+    "Compiled Worker calls both trained ML artifacts through actual LangGraph; linked Emma Chen case escalates",
+    "Model evaluation endpoint returns temporal test evidence",
+    "Background start, polling and explicit human approval persist in D1",
+    "Hosted MCP discovery exposes eight tools"
+  ],
+  "visual_browser_qa": false,
+  "real_model_verified": false
+}

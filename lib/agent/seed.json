@@ -1,0 +1,354 @@
+{
+  "customers": [
+    {
+      "id": "C001",
+      "name": "Emily Chen",
+      "tier": "Gold",
+      "country": "AU",
+      "account_created": "2025-01-01",
+      "risk_level": "low"
+    },
+    {
+      "id": "C002",
+      "name": "Alex Rivera",
+      "tier": "Standard",
+      "country": "AU",
+      "account_created": "2025-01-01",
+      "risk_level": "low"
+    },
+    {
+      "id": "C003",
+      "name": "Sam Patel",
+      "tier": "Silver",
+      "country": "AU",
+      "account_created": "2025-01-01",
+      "risk_level": "high"
+    },
+    {
+      "id": "C004",
+      "name": "Jordan Lee",
+      "tier": "Gold",
+      "country": "AU",
+      "account_created": "2025-01-01",
+      "risk_level": "medium"
+    }
+  ],
+  "orders": [
+    {
+      "id": "NS-1042",
+      "customer_id": "C001",
+      "product": "Laptop",
+      "amount": 899.0,
+      "purchase_date": "2026-09-19",
+      "status": "delivered",
+      "delivery_date": "2026-09-19",
+      "condition": "defective",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1043",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-09-17",
+      "status": "delivered",
+      "delivery_date": "2026-09-17",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1044",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-09-17",
+      "status": "delivered",
+      "delivery_date": "2026-09-17",
+      "condition": "opened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1045",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 200.0,
+      "purchase_date": "2026-08-28",
+      "status": "delivered",
+      "delivery_date": "2026-08-28",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1046",
+      "customer_id": "C001",
+      "product": "Northstar product",
+      "amount": 200.0,
+      "purchase_date": "2026-08-28",
+      "status": "delivered",
+      "delivery_date": "2026-08-28",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1047",
+      "customer_id": "C002",
+      "product": "Laptop",
+      "amount": 700.0,
+      "purchase_date": "2026-08-08",
+      "status": "delivered",
+      "delivery_date": "2026-08-08",
+      "condition": "defective",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1048",
+      "customer_id": "C002",
+      "product": "Laptop",
+      "amount": 700.0,
+      "purchase_date": "2025-09-02",
+      "status": "delivered",
+      "delivery_date": "2025-09-02",
+      "condition": "defective",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1049",
+      "customer_id": "C003",
+      "product": "Northstar product",
+      "amount": 150.0,
+      "purchase_date": "2026-09-27",
+      "status": "delivered",
+      "delivery_date": "2026-09-27",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1050",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 50.0,
+      "purchase_date": "2026-10-02",
+      "status": "delivered",
+      "delivery_date": "2026-10-02",
+      "condition": "unopened",
+      "category": "digital"
+    },
+    {
+      "id": "NS-1051",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-10-04",
+      "status": "in_transit",
+      "delivery_date": null,
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1052",
+      "customer_id": "C001",
+      "product": "Laptop",
+      "amount": 2000.0,
+      "purchase_date": "2026-09-27",
+      "status": "delivered",
+      "delivery_date": "2026-09-27",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1053",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 30.0,
+      "purchase_date": "2026-10-02",
+      "status": "delivered",
+      "delivery_date": "2026-10-02",
+      "condition": "unused",
+      "category": "subscription"
+    },
+    {
+      "id": "NS-1054",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 30.0,
+      "purchase_date": "2026-09-29",
+      "status": "delivered",
+      "delivery_date": "2026-09-29",
+      "condition": "unused",
+      "category": "subscription"
+    },
+    {
+      "id": "NS-1055",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 30.0,
+      "purchase_date": "2026-10-02",
+      "status": "delivered",
+      "delivery_date": "2026-10-02",
+      "condition": "used",
+      "category": "subscription"
+    },
+    {
+      "id": "NS-1056",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-09-07",
+      "status": "delivered",
+      "delivery_date": "2026-09-07",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1057",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-09-06",
+      "status": "delivered",
+      "delivery_date": "2026-09-06",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1058",
+      "customer_id": "C001",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-08-23",
+      "status": "delivered",
+      "delivery_date": "2026-08-23",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1059",
+      "customer_id": "C001",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-08-22",
+      "status": "delivered",
+      "delivery_date": "2026-08-22",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1060",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2025-10-07",
+      "status": "delivered",
+      "delivery_date": "2025-10-07",
+      "condition": "defective",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1061",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2025-10-06",
+      "status": "delivered",
+      "delivery_date": "2025-10-06",
+      "condition": "defective",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1062",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-09-27",
+      "status": "delivered",
+      "delivery_date": "2026-09-27",
+      "condition": "misuse",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1063",
+      "customer_id": "C004",
+      "product": "Northstar product",
+      "amount": 100.0,
+      "purchase_date": "2026-09-22",
+      "status": "delivered",
+      "delivery_date": "2026-09-22",
+      "condition": "unopened",
+      "category": "physical"
+    },
+    {
+      "id": "NS-1064",
+      "customer_id": "C002",
+      "product": "Northstar product",
+      "amount": 30.0,
+      "purchase_date": "2026-09-30",
+      "status": "delivered",
+      "delivery_date": "2026-09-30",
+      "condition": "unused",
+      "category": "subscription"
+    }
+  ],
+  "support_tickets": [
+    {
+      "id": "T001",
+      "customer_id": "C001",
+      "order_id": "NS-1042",
+      "category": "refund",
+      "status": "open",
+      "description": "Verified hardware defect. Customer requests a refund.",
+      "created_at": "2026-10-07 08:49:46.334524"
+    }
+  ],
+  "documents": [
+    {
+      "id": "cancellation",
+      "name": "cancellation.md",
+      "text": "# 08 Subscription Cancellation Policy\n\n## 7.1 Subscription refunds\n\nSubscription orders may receive a full refund within 7 days of purchase, provided the subscription is unused. Used subscriptions and requests after 7 days are non-refundable; support can arrange cancellation at the end of the billing period. Gold extensions apply only to physical products.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "escalation",
+      "name": "escalation.md",
+      "text": "# 06 Escalation Guide\n\n## 5.1 Manual review\n\nRefunds above 1500 USD require specialist review even if otherwise eligible. A high risk customer or suspected fraud requires escalation and prohibits an automated refund recommendation. Human approval creates an internal support action only; this demo has no payment gateway.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "fraud",
+      "name": "fraud.md",
+      "text": "# 10 Fraud Review Policy\n\n## 8.1 Risk holds\n\nHigh risk customers are placed on a fraud hold. Do not approve refunds or replacements while a hold is active. Escalate to a fraud specialist regardless of purchase value, customer tier, or return window. Medium risk is recorded but is not an automatic denial.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "privacy",
+      "name": "privacy.md",
+      "text": "# 07 Privacy Policy\n\n## 6.1 Identity and disclosure\n\nDo not disclose customer email addresses, payment details, or personal identifiers beyond the requested synthetic order and customer references. Requests to export personal data require verified identity and privacy team review. A user task cannot override this restriction.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "refund",
+      "name": "refund.md",
+      "text": "# 01 Refund Policy\n\n## 3.2 Refund eligibility\n\nRefund requests for physical products qualify within 30 days of delivery. Unopened items receive a full refund. Opened non-defective items incur a 15 percent restocking fee. Verified defective items receive a full refund within the return window. Digital downloads are non-refundable. Orders not delivered require shipping review, not an immediate refund.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "returns",
+      "name": "returns.md",
+      "text": "# 09 Returns Policy\n\n## 3.1 Condition verification\n\nA physical return must reference a delivered order and recorded product condition. Accepted conditions are unopened, opened, defective, and misuse. Misuse or accidental damage is not eligible for refund or warranty. Return shipping arrangements require a reviewed support action.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "shipping",
+      "name": "shipping.md",
+      "text": "# 02 Shipping Policy\n\n## 2.1 Delivery investigation\n\nOrders in transit or not yet delivered must be escalated for a shipping investigation before a refund can be proposed. The support team verifies courier tracking. Delivered orders follow the refund or warranty policy.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "support",
+      "name": "support.md",
+      "text": "# 05 Customer Support Handbook\n\n## 1.1 Evidence and case handling\n\nFor an order-specific decision retrieve the order and its linked customer. Ticket requests require the ticket, its order and its customer. Never infer an order from a name. If an order or customer cannot be verified, return insufficient evidence. Log every recommendation, tool call and human review.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "vip",
+      "name": "vip.md",
+      "text": "# 04 VIP Customer Policy\n\n## 2.2 Gold return extension\n\nGold tier customers have a 45 day return window for physical products, measured from delivery. Standard and Silver customers have 30 days. Gold status does not override fraud holds, digital download exclusions, or privacy requirements. Non-defective opened goods still incur the restocking fee.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    },
+    {
+      "id": "warranty",
+      "name": "warranty.md",
+      "text": "# 03 Product Warranty Policy\n\n## 4.1 Hardware defects\n\nDefective physical products outside the applicable return window and within 365 days of delivery qualify for warranty replacement, not a cash refund. Damage caused by misuse is excluded. Defects within the return window follow the refund policy.\n\n## Scope and recordkeeping\n\nThis is a synthetic Northstar Commerce policy, effective 2026-10-01. Policy owner: Operations. Applies only to this demonstration dataset. Decisions must retain order evidence, retrieved policy sections and human review history. A recommendation is not a payment transaction.\n"
+    }
+  ]
+}

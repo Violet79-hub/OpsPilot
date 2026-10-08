@@ -1,0 +1,13 @@
+# Release and case lifecycle evidence
+
+Run `python scripts/release-pipeline.py --backend-python /path/to/backend/python --model-python /path/to/model/python`. Install the two requirements files in separate environments: training artifact verification uses scikit-learn 1.8 while the service has its own pinned dependencies. The pipeline stops on the first failed gate and records exit codes, durations and logs in verification/. GitHub Actions runs this same command when this source is connected to GitHub; local success is not a claim of a GitHub run.
+
+The model release checks temporal split ordering, dimensions, minimum ranking metrics and shadow-only restrictions, packages artifacts with a SHA-256 manifest, verifies hashes before activation, then rehearses activation and rollback in a disposable local registry. Both rehearsal releases use the same real model weights. This demonstrates the mechanism, not deployment of a second trained model or production rollback. A tampered package is rejected without changing the active pointer. Docker configuration is supplied but this environment cannot execute Docker.
+
+Case files have revision numbers and an append-only application history. Request information blocks new assessments from reaching approval. Add evidence and explicitly resume; a fresh assessment binds to that revision. Any material change invalidates an earlier recommendation. Approval checks revision and stage inside its database transaction. Evidence remains untrusted input, separate from authoritative policy. Browser-private complaints are isolated by the current anonymous session; clearing the session loses access. This is not an enterprise identity system.
+
+The start endpoint persists execution and uses Worker waitUntil, allowing the browser to poll for results. This is bounded background execution, not a durable queue or guaranteed retry scheduler. Interrupted jobs require recovery or a new assessment. No external payment action occurs.
+
+The hosted MCP endpoint has eight read-only tools. Sites supplies authenticated identity; browser-private cases are not shared with a separate MCP identity. Discovery is public, tool execution requires identity and enforces a daily quota. The graph reuses the protocol dispatcher in process. Local SDK verification does not imply the production plugin has been installed.
+
+Live provider-assisted generation and provider embeddings require a configured secret and remain unverified. Default semantic retrieval runs a local pretrained embedding model without an API. The default policy workflow and both trained ML models also operate without a paid model API. The dashboard distinguishes measured results from unverified integrations.

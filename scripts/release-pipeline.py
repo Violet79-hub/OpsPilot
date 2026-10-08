@@ -1,0 +1,15 @@
+"""Run concrete release gates, stop at first failure, retain measured stage results."""
+import argparse,datetime,json,os,subprocess,sys,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+p=argparse.ArgumentParser();p.add_argument('--backend-python',default=sys.executable);p.add_argument('--model-python',default=sys.executable);args=p.parse_args()
+stages=[('ESLint',['npm','run','lint'],ROOT),('Synthetic forest inference parity',['node','tests/escalation.integration.mjs'],ROOT),('Synthetic model reproducibility',[args.model_python,'ml/escalation/verify.py'],ROOT),('Local semantic retrieval and NumPy parity',['node','tests/semantic.integration.mjs'],ROOT),('Client session initialization',['node','tests/session-fetch.mjs'],ROOT),('TypeScript validation',['node','node_modules/typescript/bin/tsc','--noEmit'],ROOT),('Database and workflow regression',['node','tests/runtime.integration.mjs'],ROOT),('Python service regression',[args.backend_python,'-m','pytest','tests','-q'],ROOT/'backend'),('Trained artifact reproducibility',[args.model_python,'ml/verify.py'],ROOT),('Model packaging and rollback drill',[sys.executable,'scripts/model-release.py'],ROOT),('Python MCP protocol smoke test',[args.backend_python,'scripts/mcp_smoke.py'],ROOT),('Hosted MCP protocol and authorisation',['node','tests/mcp.integration.mjs',args.backend_python],ROOT),('Measured benchmark summary',[sys.executable,'scripts/benchmark-summary.py'],ROOT),('Evidence-based portfolio documents',[sys.executable,'scripts/project-docs.py'],ROOT),('Production build',['npm','run','build'],ROOT),('Compiled Worker smoke tests',['node','tests/worker.integration.mjs'],ROOT)]
+report={'started_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'status':'running','execution':'local automated release pipeline','provider_model_verified':False,'github_actions_executed':False,'docker_executed':False,'production_rollback_tested':False,'stages':[]}
+out=ROOT/'verification/release.json';env=dict(os.environ);env['PYTHONPATH']=str(ROOT/'backend')
+for name,cmd,cwd in stages:
+    start=time.monotonic();result=subprocess.run(cmd,cwd=cwd,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+    log=ROOT/'verification'/('pipeline-'+str(len(report['stages'])+1)+'.log');log.write_text(result.stdout)
+    report['stages'].append({'name':name,'status':'passed' if result.returncode==0 else 'failed','duration_seconds':round(time.monotonic()-start,3),'exit_code':result.returncode,'log':log.name})
+    print(name,report['stages'][-1]['status'],flush=True)
+    if result.returncode:report['status']='failed';out.write_text(json.dumps(report,indent=2));print(result.stdout[-6000:]);sys.exit(result.returncode)
+report['status']='passed';report['completed_at']=datetime.datetime.now(datetime.timezone.utc).isoformat();out.write_text(json.dumps(report,indent=2));print('Release gates passed. Site publication is a separate verified step.')

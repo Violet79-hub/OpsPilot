@@ -1,0 +1,5 @@
+import {createRequire} from 'node:module';
+import assert from 'node:assert/strict';
+const require=createRequire(import.meta.url);const {build}=require(require.resolve('esbuild',{paths:[require.resolve('vite')]}));await build({entryPoints:['lib/session-fetch.ts'],outfile:'.test-output/session-fetch.mjs',platform:'node',format:'esm',bundle:true});
+const original=globalThis.fetch;let bootstraps=0,established=false;const calls=[];
+try{globalThis.fetch=async(url)=>{if(url==='/api/health'){bootstraps++;await new Promise(r=>setTimeout(r,10));established=true;return Response.json({ok:true});}assert.ok(established,'API request preceded session bootstrap');calls.push(url);return Response.json({ok:true});};const {sessionFetch}=await import('../.test-output/session-fetch.mjs');await Promise.all([sessionFetch('/api/complaints'),sessionFetch('/api/runs'),sessionFetch('/api/complaints/CP-101/casefile')]);assert.equal(bootstraps,1);assert.equal(calls.length,3);console.log('PASS concurrent client API requests wait for one successful session bootstrap');}finally{globalThis.fetch=original;}

@@ -1,0 +1,15 @@
+# Recruiter demonstration
+
+Open the existing Site. Twelve explicitly synthetic complaints are rendered in the initial HTML before browser data fetching: CP-101 through CP-112. Five historical CFPB replay records remain available after loading. These are distinct from the real dataset used to train the response-delay classifier.
+
+Click Run demo case. This creates and executes a new session-owned run for CP-101 with no provider API required. The Assessment panel shows recorded LangGraph stages, per-node durations, linked customer/transaction/account records, both model outputs and the human approval gate. Expand Evidence & citations to inspect the exact stored excerpts, source identifiers, relevance scores and whether evidence was retrieved or added by a mandatory policy check. No hidden chain of thought is displayed. The default answer is policy-based, not LLM-generated.
+
+Review or edit the response and approve the internal recommendation. No payment is made and no message is sent. Add supporting material, request information and re-assess to demonstrate revision control. Explore Evaluation for derived regression scores, independent retrieval misses and fresh session evaluation. Open Model validation for two distinct experiments: real CFPB historical response delay and synthetic escalation. Inspect baseline comparison, train/validation/test splits, confusion matrices and genuine held-out errors. Open Engineering for architecture, implementation scope and downloadable source. No GitHub URL is invented; the repository connection remains pending.
+
+The initial render contains public fixtures only, never another visitor's runs or private data. A shared client bootstrap serializes anonymous session creation before concurrent requests. On API failure, fixture descriptions stay visible, an error and retry control appear, and execution remains a real backend operation: no fabricated success is shown. Local compiled-Worker tests verify the populated server-rendered page, while a client transport regression checks single session bootstrap. Visual browser interaction has not been independently verified in this environment.
+
+## Register persistence verification
+
+The public D1 database was inspected directly: CP-101 through CP-112 and their linked customer/account records exist independently of browser sessions. GET /api/complaints now queries D1 for shared records and the visitor’s private submissions; it does not return the bundled fixture array. A regression modifies a stored fixture temporarily and verifies that two independent visitors receive that database value, then restores it. Repeated seeding neither duplicates nor overwrites the stored fixture.
+
+The first render retains twelve bundled cases as an explicitly labelled fallback. A successful database response replaces them and changes the connection label. An empty/incomplete response or request timeout preserves available cases with an error and retry control. Run history loads independently, so its failure does not discard a successfully loaded register. New assessments and human approvals remain server-backed and cannot succeed offline.

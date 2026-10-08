@@ -1,0 +1,74 @@
+[
+  {
+    "id": "fin_refund",
+    "name": "Financial Refund Review \u00a73.1",
+    "section": "3.1",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a73.1 Complete and non-conflicting evidence is required. Standard requests beyond 30 days are not eligible for a refund recommendation; Gold requests have a 45-day exception. Amounts above USD 1,000 require specialist escalation. All recommendations require human approval; no automatic payment."
+  },
+  {
+    "id": "fin_evidence",
+    "name": "Evidence Requirements \u00a74.2",
+    "section": "4.2",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a74.2 Read the complaint, linked customer, transaction and account. Missing or mismatched records block recommendations. A customer statement conflicting with a merchant record requires escalation and further investigation. Never resolve conflicting evidence solely from a model probability."
+  },
+  {
+    "id": "fin_vulnerable",
+    "name": "Vulnerable Customer \u00a72.4",
+    "section": "2.4",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a72.4 A recorded vulnerability flag requires specialist escalation, respectful communication and human review. Do not infer sensitive characteristics from names or complaint language."
+  },
+  {
+    "id": "fin_fraud",
+    "name": "Fraud Review \u00a72.1",
+    "section": "2.1",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a72.1 A declared fraud suspicion flag requires specialist escalation and human review. Neither the historical response-delay model nor the synthetic escalation classifier establishes actual fraud."
+  },
+  {
+    "id": "fin_hardship",
+    "name": "Financial Hardship \u00a72.2",
+    "section": "2.2",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a72.2 A hardship request should be referred to an authorised reviewer. Do not promise debt relief or financial entitlement. Request only the minimum relevant supporting material."
+  },
+  {
+    "id": "fin_chargeback",
+    "name": "Chargeback Procedure \u00a75.1",
+    "section": "5.1",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a75.1 Confirm transaction ownership, amount and evidence before considering a chargeback referral. Missing evidence blocks referral preparation. No external chargeback is submitted by this demo."
+  },
+  {
+    "id": "fin_communication",
+    "name": "Customer Communication Standard \u00a71.2",
+    "section": "1.2",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a71.2 Draft clear factual updates, identify missing evidence and state that a reviewer must confirm the recommendation. Never say money has been sent or a dispute resolved before verified action."
+  },
+  {
+    "id": "fin_privacy",
+    "name": "Financial Privacy \u00a71.1",
+    "section": "1.1",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a71.1 Use synthetic identifiers in demonstrations. Do not expose account numbers, personal documents or another session\u2019s data. Privacy complaints require authorised investigation."
+  },
+  {
+    "id": "fin_escalation",
+    "name": "Specialist Escalation Guide \u00a76.1",
+    "section": "6.1",
+    "version": "demo-1",
+    "updated": "2026-10-08",
+    "text": "Synthetic internal demonstration policy; not legal or regulatory advice.\n\n\u00a76.1 Escalate high-value requests above USD 1,000, vulnerability flags, fraud flags and conflicting evidence. ML scores supply shadow context only; they never override mandatory controls."
+  }
+]

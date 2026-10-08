@@ -1,0 +1,9 @@
+import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core';
+export const records = sqliteTable('records', { id: text('id').primaryKey(), kind: text('kind').notNull(), body: text('body').notNull() });
+export const documents = sqliteTable('documents', { id:text('id').primaryKey(),owner:text('owner').notNull(),name:text('name').notNull(),body:text('body').notNull(),trusted:integer('trusted').notNull().default(0),embedding:text('embedding'),created:text('created').notNull() },t=>[index('document_owner').on(t.owner)]);
+export const runs = sqliteTable('runs',{id:text('id').primaryKey(),owner:text('owner').notNull(),task:text('task').notNull(),mode:text('mode').notNull(),status:text('status').notNull(),state:text('state').notNull(),revision:integer('revision').notNull().default(0),created:text('created').notNull(),updated:text('updated').notNull()},t=>[index('run_owner_created').on(t.owner,t.created)]);
+export const events=sqliteTable('events',{id:integer('id').primaryKey({autoIncrement:true}),runId:text('run_id').notNull().references(()=>runs.id),node:text('node').notNull(),body:text('body').notNull(),created:text('created').notNull()});
+export const reviews=sqliteTable('reviews',{id:text('id').primaryKey(),runId:text('run_id').notNull().unique().references(()=>runs.id),owner:text('owner').notNull(),decision:text('decision').notNull(),answer:text('answer').notNull(),created:text('created').notNull()});
+export const actions=sqliteTable('actions',{id:text('id').primaryKey(),runId:text('run_id').notNull().unique().references(()=>runs.id),owner:text('owner').notNull(),body:text('body').notNull(),created:text('created').notNull()});
+export const batches=sqliteTable('batches',{id:text('id').primaryKey(),owner:text('owner').notNull(),mode:text('mode').notNull(),results:text('results').notNull(),created:text('created').notNull()});
+export const quotas=sqliteTable('quotas',{id:text('id').primaryKey(),count:integer('count').notNull()});

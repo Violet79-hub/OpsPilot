@@ -1,0 +1,975 @@
+{
+  "verified_at": "2026-10-07T23:28:17.508Z",
+  "model": {
+    "name": "sentence-transformers/static-retrieval-mrl-en-v1",
+    "revision": "f60985c706f192d45d218078e49e5a8b6f15283a",
+    "dimensions": 128,
+    "quantization": "per-token symmetric int8",
+    "language": "English",
+    "provider_calls": 0
+  },
+  "parity": "5 NumPy reference vectors passed at 1e-6 tolerance",
+  "keyword": {
+    "kind": "retrieval",
+    "mode": "keyword",
+    "retrieval_method": "Keyword baseline",
+    "k": 3,
+    "case_count": 24,
+    "generated_at": "2026-10-07T23:28:17.214Z",
+    "hit_rate": 0.9166666666666666,
+    "recall": 0.8958333333333334,
+    "precision": 0.3333333333333332,
+    "mrr": 0.7534722222222223,
+    "latency_ms": 254,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "embedding_tokens": 0
+    },
+    "results": [
+      {
+        "id": "ret01",
+        "query": "What is the ordinary refund time window?",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "complaint_triage",
+          "warranty",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret02",
+        "query": "Gold member extended return eligibility",
+        "relevant": [
+          "vip",
+          "refund"
+        ],
+        "retrieved": [
+          "vip",
+          "refund",
+          "complaint_triage"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.6666666666666666,
+        "mrr": 1,
+        "latency_ms": 13,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret03",
+        "query": "Opened product restocking charge",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "vip",
+          "refund",
+          "returns"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.5,
+        "latency_ms": 11,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret04",
+        "query": "Digital products refundable?",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "refund",
+          "vip",
+          "cancellation"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret05",
+        "query": "Product arrived broken warranty replacement",
+        "relevant": [
+          "warranty"
+        ],
+        "retrieved": [
+          "warranty",
+          "returns",
+          "vip"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 13,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret06",
+        "query": "Customer misused the item",
+        "relevant": [
+          "returns",
+          "warranty"
+        ],
+        "retrieved": [
+          "fin_evidence",
+          "vip",
+          "support"
+        ],
+        "hit": false,
+        "recall": 0,
+        "precision": 0,
+        "mrr": 0,
+        "latency_ms": 10,
+        "passed": false,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret07",
+        "query": "Package not delivered investigate shipment",
+        "relevant": [
+          "shipping"
+        ],
+        "retrieved": [
+          "shipping",
+          "returns",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret08",
+        "query": "Cancel an unused subscription",
+        "relevant": [
+          "cancellation"
+        ],
+        "retrieved": [
+          "cancellation",
+          "complaint_triage",
+          "fin_escalation"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret09",
+        "query": "High value refund needs human escalation",
+        "relevant": [
+          "escalation"
+        ],
+        "retrieved": [
+          "fraud",
+          "escalation",
+          "complaint_triage"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.5,
+        "latency_ms": 11,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret10",
+        "query": "Account fraud flag and risk hold",
+        "relevant": [
+          "fraud"
+        ],
+        "retrieved": [
+          "fraud",
+          "complaint_triage",
+          "fin_escalation"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret11",
+        "query": "Can I reveal the customer email or payment details?",
+        "relevant": [
+          "privacy"
+        ],
+        "retrieved": [
+          "privacy",
+          "support",
+          "vip"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret12",
+        "query": "Unknown order missing record identification",
+        "relevant": [
+          "support"
+        ],
+        "retrieved": [
+          "fin_evidence",
+          "warranty",
+          "vip"
+        ],
+        "hit": false,
+        "recall": 0,
+        "precision": 0,
+        "mrr": 0.25,
+        "latency_ms": 12,
+        "passed": false,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret13",
+        "query": "Returned goods with misuse or damage",
+        "relevant": [
+          "returns"
+        ],
+        "retrieved": [
+          "warranty",
+          "returns",
+          "fin_evidence"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.5,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret14",
+        "query": "Do not issue payment before approval",
+        "relevant": [
+          "escalation"
+        ],
+        "retrieved": [
+          "fin_refund",
+          "shipping",
+          "escalation"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret15",
+        "query": "Bought a laptop 20 days ago refund policy",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "fin_refund",
+          "warranty",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret16",
+        "query": "How to prioritize a financial complaint with response delay score",
+        "relevant": [
+          "complaint_triage"
+        ],
+        "retrieved": [
+          "complaint_triage",
+          "fin_fraud",
+          "fin_evidence"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret17",
+        "query": "A predicted probability must not decide fraud or refund entitlement",
+        "relevant": [
+          "complaint_triage"
+        ],
+        "retrieved": [
+          "fraud",
+          "escalation",
+          "complaint_triage"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret18",
+        "query": "Sensitive personal information disclosure restrictions",
+        "relevant": [
+          "privacy"
+        ],
+        "retrieved": [
+          "privacy",
+          "fin_privacy",
+          "fin_vulnerable"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret19",
+        "query": "Subscriber cancellation within the permitted days",
+        "relevant": [
+          "cancellation"
+        ],
+        "retrieved": [
+          "cancellation",
+          "warranty",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret20",
+        "query": "Warranty after the return window expires",
+        "relevant": [
+          "warranty",
+          "refund"
+        ],
+        "retrieved": [
+          "warranty",
+          "vip",
+          "returns"
+        ],
+        "hit": true,
+        "recall": 0.5,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": false,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret21",
+        "query": "VIP customer Gold tier treatment",
+        "relevant": [
+          "vip"
+        ],
+        "retrieved": [
+          "vip",
+          "fraud",
+          "fin_evidence"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 13,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret22",
+        "query": "Traceable evidence for a support decision",
+        "relevant": [
+          "support"
+        ],
+        "retrieved": [
+          "support",
+          "shipping",
+          "returns"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 11,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret23",
+        "query": "High risk customer requires manual review",
+        "relevant": [
+          "fraud",
+          "escalation"
+        ],
+        "retrieved": [
+          "escalation",
+          "fraud",
+          "complaint_triage"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.6666666666666666,
+        "mrr": 1,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret24",
+        "query": "Does a historical US complaint model work for unrelated retail orders?",
+        "relevant": [
+          "complaint_triage"
+        ],
+        "retrieved": [
+          "complaint_triage",
+          "fin_fraud",
+          "fin_evidence"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      }
+    ],
+    "scope": "Synthetic, manually labelled policy queries; independent retrieval ranking before policy evidence completion. Not LLM or ML accuracy."
+  },
+  "semantic": {
+    "kind": "retrieval",
+    "mode": "rules",
+    "retrieval_method": "Local semantic embeddings",
+    "k": 3,
+    "case_count": 24,
+    "generated_at": "2026-10-07T23:28:17.507Z",
+    "hit_rate": 0.9583333333333334,
+    "recall": 0.9375,
+    "precision": 0.361111111111111,
+    "mrr": 0.8694444444444444,
+    "latency_ms": 294,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "embedding_tokens": 0
+    },
+    "results": [
+      {
+        "id": "ret01",
+        "query": "What is the ordinary refund time window?",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "refund",
+          "warranty",
+          "returns"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 30,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret02",
+        "query": "Gold member extended return eligibility",
+        "relevant": [
+          "vip",
+          "refund"
+        ],
+        "retrieved": [
+          "vip",
+          "refund",
+          "fin_refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.6666666666666666,
+        "mrr": 1,
+        "latency_ms": 11,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret03",
+        "query": "Opened product restocking charge",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "vip",
+          "refund",
+          "shipping"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.5,
+        "latency_ms": 13,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret04",
+        "query": "Digital products refundable?",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "refund",
+          "cancellation",
+          "warranty"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 13,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret05",
+        "query": "Product arrived broken warranty replacement",
+        "relevant": [
+          "warranty"
+        ],
+        "retrieved": [
+          "warranty",
+          "returns",
+          "cancellation"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 15,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret06",
+        "query": "Customer misused the item",
+        "relevant": [
+          "returns",
+          "warranty"
+        ],
+        "retrieved": [
+          "fin_evidence",
+          "support",
+          "returns"
+        ],
+        "hit": true,
+        "recall": 0.5,
+        "precision": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "latency_ms": 11,
+        "passed": false,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret07",
+        "query": "Package not delivered investigate shipment",
+        "relevant": [
+          "shipping"
+        ],
+        "retrieved": [
+          "shipping",
+          "refund",
+          "fin_evidence"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret08",
+        "query": "Cancel an unused subscription",
+        "relevant": [
+          "cancellation"
+        ],
+        "retrieved": [
+          "cancellation",
+          "refund",
+          "support"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 11,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret09",
+        "query": "High value refund needs human escalation",
+        "relevant": [
+          "escalation"
+        ],
+        "retrieved": [
+          "escalation",
+          "fin_refund",
+          "fin_fraud"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret10",
+        "query": "Account fraud flag and risk hold",
+        "relevant": [
+          "fraud"
+        ],
+        "retrieved": [
+          "fraud",
+          "fin_escalation",
+          "fin_fraud"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret11",
+        "query": "Can I reveal the customer email or payment details?",
+        "relevant": [
+          "privacy"
+        ],
+        "retrieved": [
+          "privacy",
+          "shipping",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret12",
+        "query": "Unknown order missing record identification",
+        "relevant": [
+          "support"
+        ],
+        "retrieved": [
+          "support",
+          "privacy",
+          "fin_privacy"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret13",
+        "query": "Returned goods with misuse or damage",
+        "relevant": [
+          "returns"
+        ],
+        "retrieved": [
+          "returns",
+          "warranty",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret14",
+        "query": "Do not issue payment before approval",
+        "relevant": [
+          "escalation"
+        ],
+        "retrieved": [
+          "fin_refund",
+          "vip",
+          "cancellation"
+        ],
+        "hit": false,
+        "recall": 0,
+        "precision": 0,
+        "mrr": 0.2,
+        "latency_ms": 13,
+        "passed": false,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret15",
+        "query": "Bought a laptop 20 days ago refund policy",
+        "relevant": [
+          "refund"
+        ],
+        "retrieved": [
+          "refund",
+          "fin_chargeback",
+          "cancellation"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 13,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret16",
+        "query": "How to prioritize a financial complaint with response delay score",
+        "relevant": [
+          "complaint_triage"
+        ],
+        "retrieved": [
+          "complaint_triage",
+          "fin_refund",
+          "fin_hardship"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret17",
+        "query": "A predicted probability must not decide fraud or refund entitlement",
+        "relevant": [
+          "complaint_triage"
+        ],
+        "retrieved": [
+          "complaint_triage",
+          "fraud",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret18",
+        "query": "Sensitive personal information disclosure restrictions",
+        "relevant": [
+          "privacy"
+        ],
+        "retrieved": [
+          "privacy",
+          "fin_privacy",
+          "support"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 11,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret19",
+        "query": "Subscriber cancellation within the permitted days",
+        "relevant": [
+          "cancellation"
+        ],
+        "retrieved": [
+          "cancellation",
+          "fin_refund",
+          "fin_chargeback"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret20",
+        "query": "Warranty after the return window expires",
+        "relevant": [
+          "warranty",
+          "refund"
+        ],
+        "retrieved": [
+          "warranty",
+          "returns",
+          "refund"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.6666666666666666,
+        "mrr": 1,
+        "latency_ms": 11,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret21",
+        "query": "VIP customer Gold tier treatment",
+        "relevant": [
+          "vip"
+        ],
+        "retrieved": [
+          "vip",
+          "fin_refund",
+          "cancellation"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 1,
+        "latency_ms": 9,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret22",
+        "query": "Traceable evidence for a support decision",
+        "relevant": [
+          "support"
+        ],
+        "retrieved": [
+          "fin_evidence",
+          "fin_communication",
+          "support"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret23",
+        "query": "High risk customer requires manual review",
+        "relevant": [
+          "fraud",
+          "escalation"
+        ],
+        "retrieved": [
+          "escalation",
+          "fraud",
+          "complaint_triage"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.6666666666666666,
+        "mrr": 1,
+        "latency_ms": 12,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      },
+      {
+        "id": "ret24",
+        "query": "Does a historical US complaint model work for unrelated retail orders?",
+        "relevant": [
+          "complaint_triage"
+        ],
+        "retrieved": [
+          "shipping",
+          "complaint_triage",
+          "returns"
+        ],
+        "hit": true,
+        "recall": 1,
+        "precision": 0.3333333333333333,
+        "mrr": 0.5,
+        "latency_ms": 10,
+        "passed": true,
+        "improvement": "Inspect chunk boundaries and competing results. Compare semantic/hybrid retrieval against this frozen baseline; do not add expected sources before scoring."
+      }
+    ],
+    "scope": "Synthetic, manually labelled policy queries; independent retrieval ranking before policy evidence completion. Not LLM or ML accuracy."
+  },
+  "scope": "Existing frozen 24 English query benchmark. No expected-policy injection before ranking. Not a general language benchmark."
+}

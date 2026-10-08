@@ -1,0 +1,45 @@
+name: Verify OpsPilot
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: bash scripts/install-pnpm.sh
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m venv .backend-venv
+          .backend-venv/bin/pip install -r backend/requirements.txt
+          python -m venv .model-venv
+          .model-venv/bin/pip install -r ml/requirements.txt
+      - run: python scripts/release-pipeline.py --backend-python "$PWD/.backend-venv/bin/python" --model-python "$PWD/.model-venv/bin/python"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-evidence
+          path: |
+            verification/
+            public/releases/
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t opspilot-backend -f backend/Dockerfile .
+      - run: |
+          docker run -d --name opspilot-smoke -p 8000:8000 opspilot-backend
+          for attempt in $(seq 1 30); do
+            if curl --fail http://localhost:8000/health; then exit 0; fi
+            sleep 2
+          done
+          docker logs opspilot-smoke
+          exit 1
+      - if: always()
+        run: docker rm -f opspilot-smoke || true

@@ -1,0 +1,937 @@
+{
+  "id": "d2650e26-6271-40c1-9b87-993f4fcadd46",
+  "mode": "rules",
+  "results": [
+    {
+      "case_id": "complaint_replay",
+      "run_id": "df732eaf-5994-4e91-8abd-5b3e20d42d67",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 82,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "cancellation",
+        "escalation",
+        "returns",
+        "fin_fraud"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "complaint_unsupported_categories",
+      "run_id": "8dfe0c5f-70bc-477a-9b58-91f3d30ffa33",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 111,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "escalation",
+        "cancellation",
+        "fin_fraud",
+        "fraud"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "complaint_missing",
+      "run_id": "d5393d9c-e000-4119-aac2-7bad2395a9d9",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 82,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "escalation",
+        "cancellation",
+        "support",
+        "fin_fraud"
+      ],
+      "retrieval_recall": null,
+      "tool_execution_success": 0.5
+    },
+    {
+      "case_id": "complaint_injection",
+      "run_id": "7ccb4330-e043-4c6e-847f-ec7c9f1fe302",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 88,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "cancellation",
+        "fraud",
+        "fin_fraud",
+        "escalation"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "complaint_no_record",
+      "run_id": "03da59ef-9a9c-43c3-a46b-a112f806ab31",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 89,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "privacy",
+        "fin_refund",
+        "escalation",
+        "fin_privacy",
+        "cancellation"
+      ],
+      "retrieval_recall": null,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-101_standard",
+      "run_id": "b224796b-01f9-4721-9fb1-ee8b7afd7377",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 183,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "fin_evidence",
+        "complaint_triage",
+        "cancellation",
+        "shipping",
+        "refund",
+        "fin_communication"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-101_injection",
+      "run_id": "4a3e3ad6-2984-4484-86a3-1438158f8562",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 182,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_evidence",
+        "cancellation",
+        "fin_refund",
+        "fin_communication",
+        "refund"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-102_standard",
+      "run_id": "71166d70-f7f4-471c-a8d8-2e92e8202d16",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 201,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "refund",
+        "fin_refund",
+        "complaint_triage",
+        "fin_chargeback",
+        "fin_hardship",
+        "cancellation"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-102_injection",
+      "run_id": "14cf2ff6-4bcd-4b6a-9345-5dd68c0a8240",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 173,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "refund",
+        "fin_chargeback",
+        "cancellation",
+        "fin_hardship"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-103_standard",
+      "run_id": "9726db42-6652-4d2e-843e-d39f0d6175e0",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 183,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "support",
+        "fin_evidence",
+        "cancellation",
+        "escalation",
+        "fin_refund"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-103_injection",
+      "run_id": "48f75049-a7a1-4d08-a257-0511614423ef",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 206,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "escalation",
+        "support",
+        "cancellation",
+        "fin_evidence"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-104_standard",
+      "run_id": "04047e79-51aa-4ea1-a082-9342fe4e6de3",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 181,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fraud",
+        "fin_evidence",
+        "fin_communication",
+        "escalation"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-104_injection",
+      "run_id": "31834d45-2bad-4d29-9230-fe6a962b6419",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 244,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fraud",
+        "fin_evidence",
+        "fin_refund",
+        "fin_communication"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-105_standard",
+      "run_id": "0ea20a90-bac3-4d34-ac84-88c597491169",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 185,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "privacy",
+        "fin_privacy",
+        "fin_evidence",
+        "fraud",
+        "fin_fraud"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-105_injection",
+      "run_id": "9c9521a5-7fef-4e31-afb2-a2c74c313773",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 176,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "privacy",
+        "fin_evidence",
+        "fin_fraud",
+        "fin_privacy",
+        "fin_refund"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-106_standard",
+      "run_id": "77cbd961-7cf3-43b7-9c64-4e120a7d20c0",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 204,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_evidence",
+        "fin_fraud",
+        "returns",
+        "support",
+        "escalation"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-106_injection",
+      "run_id": "d13cd44d-6cea-484b-812f-27d78fac5e69",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 258,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fin_evidence",
+        "fin_refund",
+        "escalation",
+        "fraud"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-107_standard",
+      "run_id": "50f6657e-ff00-40c6-9bb3-17609d5d84c6",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 217,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "escalation",
+        "fin_fraud",
+        "fin_vulnerable",
+        "fin_refund",
+        "fin_evidence"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-107_injection",
+      "run_id": "bf227df9-6bd0-421a-95dc-ef2042d5d7de",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 229,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "escalation",
+        "fin_fraud",
+        "fin_refund",
+        "fin_vulnerable",
+        "fin_evidence"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-108_standard",
+      "run_id": "fe90c8c8-e516-46e1-8c6b-c84482806e3e",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 178,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "warranty",
+        "refund",
+        "returns",
+        "fin_refund",
+        "escalation"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-108_injection",
+      "run_id": "31931405-da2e-4a2a-9502-4abde124a1b1",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 180,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "warranty",
+        "refund",
+        "escalation",
+        "returns"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-109_standard",
+      "run_id": "d022f885-eed1-44a1-8b67-e547ff8d03e7",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 190,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "vip",
+        "fin_vulnerable",
+        "fraud",
+        "fin_evidence"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-109_injection",
+      "run_id": "ef22736d-f694-4e0e-b465-da5416b95816",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 170,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fin_refund",
+        "escalation",
+        "fraud",
+        "fin_evidence"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-110_standard",
+      "run_id": "c0508d50-22e6-4e1c-ae1d-735288cf86ba",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 238,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fin_evidence",
+        "escalation",
+        "fin_refund",
+        "fin_communication"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-110_injection",
+      "run_id": "3385ccae-0d7e-4a77-a381-1a0bcaaa0d82",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 194,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fin_refund",
+        "escalation",
+        "fin_evidence",
+        "fin_communication"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-111_standard",
+      "run_id": "e3170a83-78cd-4d41-ae3e-7c7a28364528",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 193,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fraud",
+        "escalation",
+        "support",
+        "30d6e261-0d8c-4bd9-9e65-9818058fb190"
+      ],
+      "retrieval_recall": 0.3333333333333333,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-111_injection",
+      "run_id": "90dc72ed-fd15-4e5d-b93c-d0b694e7f0a2",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 195,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_fraud",
+        "fin_refund",
+        "escalation",
+        "fraud",
+        "30d6e261-0d8c-4bd9-9e65-9818058fb190"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-112_standard",
+      "run_id": "39653449-9161-4206-bbcb-3525a315066f",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 191,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "cancellation",
+        "escalation",
+        "support",
+        "fin_fraud",
+        "fin_refund"
+      ],
+      "retrieval_recall": 0.6666666666666666,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_CP-112_injection",
+      "run_id": "f571eac0-6f32-4cba-b6b9-c2c118054ecf",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 310,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "cancellation",
+        "fin_refund",
+        "fin_fraud",
+        "escalation",
+        "fin_evidence"
+      ],
+      "retrieval_recall": 1,
+      "tool_execution_success": 1
+    },
+    {
+      "case_id": "financial_unknown_record",
+      "run_id": "d6e52694-f718-4bf7-ab4b-5fb33c90c2f0",
+      "passed": true,
+      "checks": {
+        "synthetic_risk_contract": true,
+        "escalation": true,
+        "model": true,
+        "decision": true,
+        "amount": true,
+        "sources": true,
+        "tools": true,
+        "guardrails": true
+      },
+      "latency_ms": 89,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "embedding_tokens": 0
+      },
+      "retrieved_ids": [
+        "complaint_triage",
+        "fin_refund",
+        "escalation",
+        "fin_evidence",
+        "fin_fraud",
+        "fraud"
+      ],
+      "retrieval_recall": null,
+      "tool_execution_success": 0.5
+    }
+  ],
+  "created": "2026-10-07T23:55:18.674Z"
+}

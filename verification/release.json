@@ -1,0 +1,124 @@
+{
+  "started_at": "2026-10-07T23:28:03.566360+00:00",
+  "status": "passed",
+  "execution": "local automated release pipeline",
+  "provider_model_verified": false,
+  "github_actions_executed": false,
+  "docker_executed": false,
+  "production_rollback_tested": false,
+  "stages": [
+    {
+      "name": "ESLint",
+      "status": "passed",
+      "duration_seconds": 6.687,
+      "exit_code": 0,
+      "log": "pipeline-1.log"
+    },
+    {
+      "name": "Synthetic forest inference parity",
+      "status": "passed",
+      "duration_seconds": 0.134,
+      "exit_code": 0,
+      "log": "pipeline-2.log"
+    },
+    {
+      "name": "Synthetic model reproducibility",
+      "status": "passed",
+      "duration_seconds": 1.444,
+      "exit_code": 0,
+      "log": "pipeline-3.log"
+    },
+    {
+      "name": "Local semantic retrieval and NumPy parity",
+      "status": "passed",
+      "duration_seconds": 7.787,
+      "exit_code": 0,
+      "log": "pipeline-4.log"
+    },
+    {
+      "name": "Client session initialization",
+      "status": "passed",
+      "duration_seconds": 0.117,
+      "exit_code": 0,
+      "log": "pipeline-5.log"
+    },
+    {
+      "name": "TypeScript validation",
+      "status": "passed",
+      "duration_seconds": 3.458,
+      "exit_code": 0,
+      "log": "pipeline-6.log"
+    },
+    {
+      "name": "Database and workflow regression",
+      "status": "passed",
+      "duration_seconds": 24.323,
+      "exit_code": 0,
+      "log": "pipeline-7.log"
+    },
+    {
+      "name": "Python service regression",
+      "status": "passed",
+      "duration_seconds": 7.722,
+      "exit_code": 0,
+      "log": "pipeline-8.log"
+    },
+    {
+      "name": "Trained artifact reproducibility",
+      "status": "passed",
+      "duration_seconds": 1.875,
+      "exit_code": 0,
+      "log": "pipeline-9.log"
+    },
+    {
+      "name": "Model packaging and rollback drill",
+      "status": "passed",
+      "duration_seconds": 0.082,
+      "exit_code": 0,
+      "log": "pipeline-10.log"
+    },
+    {
+      "name": "Python MCP protocol smoke test",
+      "status": "passed",
+      "duration_seconds": 2.264,
+      "exit_code": 0,
+      "log": "pipeline-11.log"
+    },
+    {
+      "name": "Hosted MCP protocol and authorisation",
+      "status": "passed",
+      "duration_seconds": 7.885,
+      "exit_code": 0,
+      "log": "pipeline-12.log"
+    },
+    {
+      "name": "Measured benchmark summary",
+      "status": "passed",
+      "duration_seconds": 0.039,
+      "exit_code": 0,
+      "log": "pipeline-13.log"
+    },
+    {
+      "name": "Evidence-based portfolio documents",
+      "status": "passed",
+      "duration_seconds": 0.035,
+      "exit_code": 0,
+      "log": "pipeline-14.log"
+    },
+    {
+      "name": "Production build",
+      "status": "passed",
+      "duration_seconds": 11.876,
+      "exit_code": 0,
+      "log": "pipeline-15.log"
+    },
+    {
+      "name": "Compiled Worker smoke tests",
+      "status": "passed",
+      "duration_seconds": 6.346,
+      "exit_code": 0,
+      "log": "pipeline-16.log"
+    }
+  ],
+  "completed_at": "2026-10-07T23:29:25.643259+00:00"
+}

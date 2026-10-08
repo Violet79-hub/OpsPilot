@@ -1,0 +1,445 @@
+{
+  "generated_at": "2026-10-07T10:18:59.158543+00:00",
+  "model_version": "cfpb-delay-v2",
+  "dataset": {
+    "source": "CFPB public Consumer Complaint Database",
+    "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/",
+    "downloaded_at": "2026-10-07T10:17:48.714191+00:00",
+    "requests": [
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2015-01-01&date_received_max=2015-06-30",
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2015-07-01&date_received_max=2015-12-31",
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2016-01-01&date_received_max=2016-06-30",
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2016-07-01&date_received_max=2016-12-31",
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2017-01-01&date_received_max=2017-06-30"
+    ],
+    "rows": 20000,
+    "sha256": "f6991624b7a9c9f04c59396ddf7b9c949d970632b0ec37ad575e9a6cbc0d6e02",
+    "label": "timely=No; response-delay outcome, not actual escalation or fraud",
+    "retained_fields": [
+      "complaint_id",
+      "date_received",
+      "product",
+      "sub_product",
+      "issue",
+      "sub_issue",
+      "submitted_via",
+      "timely",
+      "company_key"
+    ],
+    "sampling": "First 4000 API results per half-year window, 2015\u20132017. Convenience sample, not population representative. Recent pilot had only 66 positives/16000 and was rejected.",
+    "feature_engineering": "Stable SHA256 company category (16 hex characters); company identity is known before response, unlike outcome fields. No company response or response date features.",
+    "excluded": "Narratives, company names, locations, personal fields and all response/resolution fields excluded from features",
+    "limitations": "Historical US financial complaint domain only; no retail transfer or current risk calibration"
+  },
+  "task": "Response-delay triage for historical US financial complaints; NOT fraud or refund entitlement",
+  "features": [
+    "product",
+    "sub_product",
+    "issue",
+    "sub_issue",
+    "submitted_via",
+    "company_key"
+  ],
+  "split": {
+    "method": "chronological, no refit on validation/test",
+    "train": {
+      "rows": 12000,
+      "positives": 333,
+      "start": "2015-06-22T18:42:02.000Z",
+      "end": "2016-06-30T23:58:43.000Z"
+    },
+    "validation": {
+      "rows": 4000,
+      "positives": 163,
+      "start": "2016-08-15T21:57:06.000Z",
+      "end": "2016-12-31T23:56:18.000Z"
+    },
+    "test": {
+      "rows": 4000,
+      "positives": 90,
+      "start": "2017-04-24T12:40:40.000Z",
+      "end": "2017-06-30T23:59:45.000Z"
+    }
+  },
+  "baseline": {
+    "algorithm": "Dummy prior, threshold 0.5",
+    "test": {
+      "accuracy": 0.9775,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.0225,
+      "brier_score": 0.0220213125,
+      "confusion_matrix": [
+        [
+          3910,
+          0
+        ],
+        [
+          90,
+          0
+        ]
+      ],
+      "support": 4000,
+      "positive_support": 90,
+      "positive_rate": 0.0225,
+      "threshold": 0.5
+    }
+  },
+  "experiments": [
+    {
+      "model": "LogisticRegression C=0.1",
+      "validation": {
+        "accuracy": 0.88875,
+        "precision": 0.11263736263736264,
+        "recall": 0.25153374233128833,
+        "f1": 0.1555977229601518,
+        "roc_auc": 0.7024819684345676,
+        "average_precision": 0.1006433456006903,
+        "brier_score": 0.03850120427460236,
+        "confusion_matrix": [
+          [
+            3514,
+            323
+          ],
+          [
+            122,
+            41
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 163,
+        "positive_rate": 0.04075,
+        "threshold": 0.09250428371241189
+      }
+    },
+    {
+      "model": "LogisticRegression C=1.0",
+      "validation": {
+        "accuracy": 0.91475,
+        "precision": 0.15234375,
+        "recall": 0.2392638036809816,
+        "f1": 0.18615751789976134,
+        "roc_auc": 0.7399761124728388,
+        "average_precision": 0.12155810465443462,
+        "brier_score": 0.03837172376140229,
+        "confusion_matrix": [
+          [
+            3620,
+            217
+          ],
+          [
+            124,
+            39
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 163,
+        "positive_rate": 0.04075,
+        "threshold": 0.1032672806396909
+      }
+    },
+    {
+      "model": "LogisticRegression C=10.0",
+      "validation": {
+        "accuracy": 0.8415,
+        "precision": 0.12678288431061807,
+        "recall": 0.49079754601226994,
+        "f1": 0.20151133501259447,
+        "roc_auc": 0.8042485901722173,
+        "average_precision": 0.13401583838008163,
+        "brier_score": 0.040837520388080646,
+        "confusion_matrix": [
+          [
+            3286,
+            551
+          ],
+          [
+            83,
+            80
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 163,
+        "positive_rate": 0.04075,
+        "threshold": 0.024436689771929164
+      }
+    },
+    {
+      "model": "RandomForest depth=6",
+      "validation": {
+        "accuracy": 0.81275,
+        "precision": 0.08615819209039548,
+        "recall": 0.37423312883435583,
+        "f1": 0.14006888633754305,
+        "roc_auc": 0.6934114234823665,
+        "average_precision": 0.08988050688103202,
+        "brier_score": 0.038791605048537875,
+        "confusion_matrix": [
+          [
+            3190,
+            647
+          ],
+          [
+            102,
+            61
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 163,
+        "positive_rate": 0.04075,
+        "threshold": 0.053215711274903495
+      }
+    }
+  ],
+  "selected_model": "LogisticRegression C=10.0",
+  "validation": {
+    "accuracy": 0.8415,
+    "precision": 0.12678288431061807,
+    "recall": 0.49079754601226994,
+    "f1": 0.20151133501259447,
+    "roc_auc": 0.8042485901722173,
+    "average_precision": 0.13401583838008163,
+    "brier_score": 0.040837520388080646,
+    "confusion_matrix": [
+      [
+        3286,
+        551
+      ],
+      [
+        83,
+        80
+      ]
+    ],
+    "support": 4000,
+    "positive_support": 163,
+    "positive_rate": 0.04075,
+    "threshold": 0.024436689771929164
+  },
+  "test": {
+    "accuracy": 0.84425,
+    "precision": 0.09682299546142209,
+    "recall": 0.7111111111111111,
+    "f1": 0.170439414114514,
+    "roc_auc": 0.8807686842853084,
+    "average_precision": 0.14130822235977722,
+    "brier_score": 0.022722757417127377,
+    "confusion_matrix": [
+      [
+        3313,
+        597
+      ],
+      [
+        26,
+        64
+      ]
+    ],
+    "support": 4000,
+    "positive_support": 90,
+    "positive_rate": 0.0225,
+    "threshold": 0.024436689771929164
+  },
+  "test_unseen_category_fraction": 0.5257083333333333,
+  "failure_cases": [
+    {
+      "record_id": "2563361",
+      "features": {
+        "product": "Debt collection",
+        "sub_product": "Other debt",
+        "issue": "Written notification about debt",
+        "sub_issue": "Didn't receive enough information to verify debt",
+        "submitted_via": "Fax",
+        "company_key": "f83cfd3fab6a52f6"
+      },
+      "actual_delay": true,
+      "probability": 0.00039717308836792237,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2561505",
+      "features": {
+        "product": "Student loan",
+        "sub_product": "Federal student loan servicing",
+        "issue": "Dealing with your lender or servicer",
+        "sub_issue": "Trouble with how payments are being handled",
+        "submitted_via": "Web",
+        "company_key": "ace70d18655e2a90"
+      },
+      "actual_delay": true,
+      "probability": 0.005215440846864133,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2630255",
+      "features": {
+        "product": "Credit reporting, credit repair services, or other personal consumer reports",
+        "sub_product": "Credit reporting",
+        "issue": "Problem with a credit reporting company's investigation into an existing problem",
+        "sub_issue": "Their investigation did not fix an error on your report",
+        "submitted_via": "Web",
+        "company_key": "355670857e012c09"
+      },
+      "actual_delay": true,
+      "probability": 0.005961289717512332,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2628794",
+      "features": {
+        "product": "Money transfer, virtual currency, or money service",
+        "sub_product": "International money transfer",
+        "issue": "Other service problem",
+        "sub_issue": "__missing__",
+        "submitted_via": "Phone",
+        "company_key": "430c75579bf465d6"
+      },
+      "actual_delay": true,
+      "probability": 0.007347979748044072,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2562614",
+      "features": {
+        "product": "Debt collection",
+        "sub_product": "Auto debt",
+        "issue": "Attempts to collect debt not owed",
+        "sub_issue": "Debt is not yours",
+        "submitted_via": "Web",
+        "company_key": "57d35235fb48ff54"
+      },
+      "actual_delay": true,
+      "probability": 0.009493649553185077,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2641482",
+      "features": {
+        "product": "Debt collection",
+        "sub_product": "Payday loan debt",
+        "issue": "Written notification about debt",
+        "sub_issue": "Didn't receive enough information to verify debt",
+        "submitted_via": "Web",
+        "company_key": "d4f3e1ba04b75d75"
+      },
+      "actual_delay": true,
+      "probability": 0.009736441846139265,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2561137",
+      "features": {
+        "product": "Mortgage",
+        "sub_product": "Other type of mortgage",
+        "issue": "Struggling to pay mortgage",
+        "sub_issue": "__missing__",
+        "submitted_via": "Postal mail",
+        "company_key": "3ec3792123ffa5da"
+      },
+      "actual_delay": true,
+      "probability": 0.009744415103129825,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2560354",
+      "features": {
+        "product": "Debt collection",
+        "sub_product": "Auto debt",
+        "issue": "Written notification about debt",
+        "sub_issue": "Didn't receive enough information to verify debt",
+        "submitted_via": "Web",
+        "company_key": "42425005b2d3aab4"
+      },
+      "actual_delay": true,
+      "probability": 0.009862346021861809,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2558640",
+      "features": {
+        "product": "Debt collection",
+        "sub_product": "Other debt",
+        "issue": "Written notification about debt",
+        "sub_issue": "Didn't receive enough information to verify debt",
+        "submitted_via": "Postal mail",
+        "company_key": "e1a02d747a96bb7c"
+      },
+      "actual_delay": true,
+      "probability": 0.009923724294688775,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2613278",
+      "features": {
+        "product": "Student loan",
+        "sub_product": "Federal student loan servicing",
+        "issue": "Dealing with your lender or servicer",
+        "sub_issue": "Received bad information about your loan",
+        "submitted_via": "Phone",
+        "company_key": "f5209b756bff3612"
+      },
+      "actual_delay": true,
+      "probability": 0.011010421199562664,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2559160",
+      "features": {
+        "product": "Mortgage",
+        "sub_product": "FHA mortgage",
+        "issue": "Trouble during payment process",
+        "sub_issue": "__missing__",
+        "submitted_via": "Phone",
+        "company_key": "86ef0bff47b7f171"
+      },
+      "actual_delay": true,
+      "probability": 0.013408536543029094,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2558890",
+      "features": {
+        "product": "Debt collection",
+        "sub_product": "I do not know",
+        "issue": "Attempts to collect debt not owed",
+        "sub_issue": "Debt is not yours",
+        "submitted_via": "Web",
+        "company_key": "e1a02d747a96bb7c"
+      },
+      "actual_delay": true,
+      "probability": 0.01489478469860537,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    }
+  ],
+  "promotion": {
+    "status": "shadow_only",
+    "statistical_gate_passed": true,
+    "reason": "Historical convenience sample and temporal/domain shift; no current deployment validation. Scores are reviewer context only and never authorize refunds, fraud labels or external actions."
+  },
+  "training_seconds": 2.443326517999594,
+  "selection": "Highest validation average precision; threshold maximizes validation F1; test evaluated once after selection."
+}

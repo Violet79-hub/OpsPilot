@@ -1,0 +1,62 @@
+[
+  {
+    "id": "CP-001",
+    "source": "Historical CFPB public record; replay, not a current customer",
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "VA mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "dd25baf5774fbcd3"
+    }
+  },
+  {
+    "id": "CP-002",
+    "source": "Historical CFPB public record; replay, not a current customer",
+    "features": {
+      "product": "Payday loan, title loan, or personal loan",
+      "sub_product": "Personal line of credit",
+      "issue": "Charged fees or interest you didn't expect",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "09f93f7373782ba3"
+    }
+  },
+  {
+    "id": "CP-003",
+    "source": "Historical CFPB public record; replay, not a current customer",
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "VA mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "dd25baf5774fbcd3"
+    }
+  },
+  {
+    "id": "CP-004",
+    "source": "Historical CFPB public record; replay, not a current customer",
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "Credit card debt",
+      "issue": "Communication tactics",
+      "sub_issue": "Used obscene, profane, or other abusive language",
+      "submitted_via": "Web",
+      "company_key": "d91062348b2e11d8"
+    }
+  },
+  {
+    "id": "CP-005",
+    "source": "Historical CFPB public record; replay, not a current customer",
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "Other debt",
+      "issue": "Attempts to collect debt not owed",
+      "sub_issue": "Debt was paid",
+      "submitted_via": "Web",
+      "company_key": "bd60e3132abe6d22"
+    }
+  }
+]

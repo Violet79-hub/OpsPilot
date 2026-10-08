@@ -1,0 +1,57 @@
+{
+  "verified_at": "2026-10-07T23:28:47.425Z",
+  "scope": "Measured local D1/LangGraph regression executions, not production traffic or LLM quality. Citation score checks required source IDs; tool score checks expected tool coverage, not autonomous tool-selection accuracy.",
+  "suites": [
+    {
+      "name": "Legacy refund regression",
+      "cases": 30,
+      "passed": 30,
+      "decision": 1.0,
+      "citations": 1.0,
+      "tool_coverage": 1.0,
+      "mean_latency_ms": 89.2,
+      "failed": []
+    },
+    {
+      "name": "Financial complaint regression",
+      "cases": 30,
+      "passed": 30,
+      "decision": 1.0,
+      "citations": 1.0,
+      "tool_coverage": 1.0,
+      "mean_latency_ms": 172.8,
+      "failed": []
+    }
+  ],
+  "retrieval": {
+    "recall": 0.9375,
+    "mrr": 0.8694444444444444,
+    "cases": 24,
+    "failed": [
+      {
+        "query": "Customer misused the item",
+        "expected": [
+          "returns",
+          "warranty"
+        ],
+        "retrieved": [
+          "fin_evidence",
+          "support",
+          "returns"
+        ]
+      },
+      {
+        "query": "Do not issue payment before approval",
+        "expected": [
+          "escalation"
+        ],
+        "retrieved": [
+          "fin_refund",
+          "vip",
+          "cancellation"
+        ]
+      }
+    ]
+  },
+  "provider_cost": "No provider calls in these local-mode tests. Hosting costs excluded; live provider cost is not measured."
+}

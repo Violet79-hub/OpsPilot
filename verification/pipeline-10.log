@@ -1,0 +1,23 @@
+{
+  "verified_at": "2026-10-07T23:28:57.189121+00:00",
+  "artifact_version": "cfpb-delay-v2",
+  "quality_gate": "passed for shadow use only",
+  "integrity_gate": "passed",
+  "corrupt_candidate": "rejected; previous pointer preserved",
+  "rollback_drill": "passed in disposable local registry; same model in two release packages",
+  "production_rollback_tested": false,
+  "archive_sha256": "e9613fed8331309c8a11f14b9ed45812ea4671dc6e23bb660315257446e8820f",
+  "manifest": {
+    "release": "cfpb-delay-v2",
+    "model_version": "cfpb-delay-v2",
+    "dataset_sha256": "f6991624b7a9c9f04c59396ddf7b9c949d970632b0ec37ad575e9a6cbc0d6e02",
+    "created_at": "2026-10-07T23:28:57.174226+00:00",
+    "mode": "shadow_only",
+    "files": {
+      "risk-model.json": "371af4ca3af401aa8d3ba8c77ef0c010d307bada3ead695c8c8c447d45916957",
+      "evaluation.json": "bdf624fb459756c0e8228df4ffa21cfea4bca61a5a0a204ff2b2f1f7e8ec1772",
+      "risk-model.joblib": "cb281afe1a7977911a316582318d9081b7af847abd3e383df4604d787f72c2d2",
+      "parity.json": "ec6e55286e44e1b30103082891b10ab28b25f696fa39e5a44adcd0e65abb87e4"
+    }
+  }
+}

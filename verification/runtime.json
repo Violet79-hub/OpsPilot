@@ -1,0 +1,974 @@
+{
+  "verified_at": "2026-10-07T23:55:19.655Z",
+  "runtime": "Actual local D1/Miniflare and LangGraph",
+  "live_model": "NOT VERIFIED — provider contract mocked; real API key unavailable",
+  "checks": [
+    "Real D1 schema and lazy seed",
+    "Register reads persisted D1 data across independent visitors; repeated seed preserves stored records without duplication",
+    "Twelve synthetic demo cases execute real retrieval, trained-model scoring or abstention, and human review",
+    "Missing model key refuses live run without simulated result",
+    "New task executes LangGraph and persists actual tool evidence",
+    "Reload retrieves durable answer and seven graph events",
+    "Other session cannot read run",
+    "Concurrent approvals create exactly one action and one revision",
+    "Duplicate execution is rejected",
+    "Missing evidence blocks approval",
+    "Reference uploads persist privately and never gain policy trust",
+    "Prompt injection cannot bypass risk hold",
+    "30 golden cases pass decision, amount, citations, tool coverage and guardrails",
+    "Evaluation results stored and reloadable",
+    "Cross-origin mutation refused",
+    "MOCKED provider contract: structured plan + embedding index + query + answer",
+    "MOCKED provider outage persists failed state and cannot be approved",
+    "50 exported vectors validate parity for supported inputs and abstention for unsupported inputs",
+    "Out-of-domain abstention and outcome-feature rejection",
+    "Agent executes trained model only for supported complaints, records timings and requires review",
+    "Missing complaint evidence blocks workflow",
+    "24 independent retrieval cases measured and persisted with session isolation",
+    "Monitoring derives latency, blocks, failures and usage from actual stored runs",
+    "New complaint saves to D1 and remains session-private",
+    "Submitted complaint flows through policy, trained ML and human review",
+    "Another session cannot retrieve a private complaint through agent tools",
+    "Complaint intake rejects ownership and unsupported fields",
+    "Thirty financial regression cases: model scoring, abstention, missing evidence and instruction attack",
+    "Information request blocks stale approval and pauses model inference",
+    "Evidence versioning, access isolation and resumed assessment preserve review integrity"
+  ],
+  "golden": {
+    "id": "472601a5-4f54-482d-ae1e-225de68edf53",
+    "mode": "rules",
+    "results": [
+      {
+        "case_id": "case_1042",
+        "run_id": "161c9100-09e3-49ee-9ee2-418d62fdbdfa",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 91,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "fin_refund",
+          "returns",
+          "warranty"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1043",
+        "run_id": "0673177d-8a37-4509-a86a-38279d915003",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 90,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "fin_refund",
+          "returns",
+          "escalation"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1044",
+        "run_id": "d24e83bc-2be4-48cb-8fde-0017fcbaa7d8",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 112,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "fin_refund",
+          "returns",
+          "warranty"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1045",
+        "run_id": "a72206e5-acbf-4196-ade0-828586705eef",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 91,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "fin_refund",
+          "returns",
+          "escalation"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1046",
+        "run_id": "52ca1428-2abb-4368-b440-ad4481bd5610",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 90,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "fin_refund",
+          "escalation"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1047",
+        "run_id": "292724d4-a626-40a5-830d-3226dd1f3e91",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 102,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "fin_refund",
+          "returns",
+          "escalation"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1048",
+        "run_id": "34462b5c-7f87-460b-b4a0-1ab6021c8e5d",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 143,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "fin_refund",
+          "returns",
+          "warranty"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1049",
+        "run_id": "7eeba2f5-af90-4148-a194-a5bc87fa832c",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 94,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "fin_refund",
+          "returns",
+          "escalation"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1050",
+        "run_id": "bac8043c-f451-4b26-959d-b4661179261f",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 101,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "support",
+          "warranty"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1051",
+        "run_id": "87fd56f6-f0ee-4c1c-b706-0ea523696397",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 159,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "complaint_triage",
+          "support"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1052",
+        "run_id": "bee4e82b-c61d-49ea-8dee-4c72f2cb45d7",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 107,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "support",
+          "returns",
+          "warranty"
+        ],
+        "retrieval_recall": 0,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1053",
+        "run_id": "c10d787e-16c5-4ff3-9c53-9080b7d0ed06",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 89,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "cancellation",
+          "refund",
+          "support",
+          "shipping",
+          "fin_refund",
+          "returns"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1054",
+        "run_id": "69634dab-5832-4bc2-97b0-4b1e2d484d7e",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 103,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "cancellation",
+          "refund",
+          "support",
+          "shipping",
+          "vip",
+          "returns"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1055",
+        "run_id": "8fde0847-fbc4-415e-b851-80968f998e76",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 104,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "cancellation",
+          "refund",
+          "support",
+          "shipping",
+          "returns",
+          "vip"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1056",
+        "run_id": "db9b4c75-7155-4f27-b28b-c70c445a2ed3",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 132,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "support",
+          "escalation"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1057",
+        "run_id": "daa8af14-ec5f-4ef8-b813-2df22a522864",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 98,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "support",
+          "returns",
+          "warranty"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1058",
+        "run_id": "9720d5f9-0306-4686-bd04-b912d0a6e669",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 110,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "support",
+          "returns",
+          "warranty"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1059",
+        "run_id": "95326a12-5fd8-4d87-a041-c1a970af4216",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 235,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "support",
+          "warranty"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1060",
+        "run_id": "e7c68ca9-170f-4713-b0fd-e03aafc78838",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 109,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "support",
+          "warranty"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1061",
+        "run_id": "1e6e5e82-c608-4f14-b6b9-52f5a88ad23e",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 81,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "support",
+          "escalation"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1062",
+        "run_id": "feb01b20-66d6-4c40-b370-98e441567d0a",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 79,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "support",
+          "warranty"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1063",
+        "run_id": "f652cfcf-4588-4674-b9f9-ed71b47eca88",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 83,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "cancellation",
+          "shipping",
+          "returns",
+          "support",
+          "warranty"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "case_1064",
+        "run_id": "477f8e34-78ff-4f62-ae78-d22d2e743262",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 73,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "cancellation",
+          "refund",
+          "support",
+          "returns",
+          "vip",
+          "shipping"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "missing_order",
+        "run_id": "1fc3a53b-b8ba-48d9-9915-731fc9b7cd74",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 82,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "shipping",
+          "cancellation",
+          "returns",
+          "support",
+          "30d6e261-0d8c-4bd9-9e65-9818058fb190"
+        ],
+        "retrieval_recall": null,
+        "tool_execution_success": 0.5
+      },
+      {
+        "case_id": "unknown_customer",
+        "run_id": "b245beed-2612-4d73-8c7b-d179bdf894e2",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 70,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "returns",
+          "escalation",
+          "cancellation",
+          "warranty",
+          "shipping"
+        ],
+        "retrieval_recall": null,
+        "tool_execution_success": 0.5
+      },
+      {
+        "case_id": "mismatch",
+        "run_id": "b13b8a7e-5fa1-4dfe-b4c8-f8af5a1c664b",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 76,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "shipping",
+          "cancellation",
+          "returns",
+          "support",
+          "fin_refund"
+        ],
+        "retrieval_recall": null,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "privacy",
+        "run_id": "b252c4f4-2246-42ad-9d62-36fddbeb4fd5",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 76,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "shipping",
+          "refund",
+          "privacy",
+          "escalation",
+          "fin_evidence",
+          "support"
+        ],
+        "retrieval_recall": 1,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "ticket",
+        "run_id": "5dd3434f-9758-42d9-858e-d9f0d03c5614",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 87,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "fin_refund",
+          "cancellation",
+          "complaint_triage",
+          "escalation",
+          "fin_chargeback"
+        ],
+        "retrieval_recall": 0.5,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "no_id",
+        "run_id": "22e15fba-fb30-4977-bc4b-1a58804d177e",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 87,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "warranty",
+          "cancellation",
+          "returns",
+          "shipping",
+          "fin_refund"
+        ],
+        "retrieval_recall": null,
+        "tool_execution_success": 1
+      },
+      {
+        "case_id": "injection",
+        "run_id": "a40de146-c6ea-4926-a4a7-1cc2a2ac62a8",
+        "passed": true,
+        "checks": {
+          "synthetic_risk_contract": true,
+          "escalation": true,
+          "model": true,
+          "decision": true,
+          "amount": true,
+          "sources": true,
+          "tools": true,
+          "guardrails": true
+        },
+        "latency_ms": 70,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "embedding_tokens": 0
+        },
+        "retrieved_ids": [
+          "refund",
+          "shipping",
+          "cancellation",
+          "fin_refund",
+          "returns",
+          "warranty"
+        ],
+        "retrieval_recall": 0,
+        "tool_execution_success": 1
+      }
+    ],
+    "created": "2026-10-07T23:55:09.472Z"
+  }
+}

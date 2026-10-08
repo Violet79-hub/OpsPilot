@@ -1,0 +1,523 @@
+{
+  "model_version": "synthetic-escalation-v1",
+  "trained_at": "2026-10-07T23:16:43.762701+00:00",
+  "selected_model": "Random forest",
+  "dataset_size": 2000,
+  "dataset_sha256": "e93423d774e707d5e7f5cf352c8ea155e9dca402b9427f145f6c3762cbd2d577",
+  "synthetic": true,
+  "scope": "Labels are sampled from an explicitly programmed synthetic mechanism. Metrics measure recovery of that mechanism, not actual customer escalation. Shadow-only; no financial decision may use this probability as authority.",
+  "split": {
+    "train": {
+      "rows": 1200,
+      "positive": 430
+    },
+    "validation": {
+      "rows": 400,
+      "positive": 144
+    },
+    "test": {
+      "rows": 400,
+      "positive": 143
+    }
+  },
+  "selection": "Validation average precision chooses the model; validation F1 chooses the threshold; test used once for reporting.",
+  "validation_average_precision": {
+    "Logistic regression": 0.7039540728751803,
+    "Random forest": 0.7109919985817672
+  },
+  "threshold": 0.25,
+  "baseline": {
+    "accuracy": 0.64,
+    "precision": 0.49767441860465117,
+    "recall": 0.7482517482517482,
+    "f1": 0.5977653631284916,
+    "roc_auc": 0.753176784305189,
+    "average_precision": 0.6691017789748009,
+    "confusion_matrix": [
+      [
+        149,
+        108
+      ],
+      [
+        36,
+        107
+      ]
+    ],
+    "roc": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.007782101167315175,
+        "tpr": 0.07692307692307693
+      },
+      {
+        "fpr": 0.01556420233463035,
+        "tpr": 0.1888111888111888
+      },
+      {
+        "fpr": 0.027237354085603113,
+        "tpr": 0.2517482517482518
+      },
+      {
+        "fpr": 0.03501945525291829,
+        "tpr": 0.2867132867132867
+      },
+      {
+        "fpr": 0.054474708171206226,
+        "tpr": 0.34965034965034963
+      },
+      {
+        "fpr": 0.06614785992217899,
+        "tpr": 0.3916083916083916
+      },
+      {
+        "fpr": 0.08171206225680934,
+        "tpr": 0.40559440559440557
+      },
+      {
+        "fpr": 0.09727626459143969,
+        "tpr": 0.46153846153846156
+      },
+      {
+        "fpr": 0.11284046692607004,
+        "tpr": 0.4965034965034965
+      },
+      {
+        "fpr": 0.12840466926070038,
+        "tpr": 0.5244755244755245
+      },
+      {
+        "fpr": 0.14396887159533073,
+        "tpr": 0.5454545454545454
+      },
+      {
+        "fpr": 0.17120622568093385,
+        "tpr": 0.5664335664335665
+      },
+      {
+        "fpr": 0.22178988326848248,
+        "tpr": 0.5944055944055944
+      },
+      {
+        "fpr": 0.23735408560311283,
+        "tpr": 0.6153846153846154
+      },
+      {
+        "fpr": 0.28793774319066145,
+        "tpr": 0.6293706293706294
+      },
+      {
+        "fpr": 0.29961089494163423,
+        "tpr": 0.6643356643356644
+      },
+      {
+        "fpr": 0.3463035019455253,
+        "tpr": 0.6853146853146853
+      },
+      {
+        "fpr": 0.38132295719844356,
+        "tpr": 0.7202797202797203
+      },
+      {
+        "fpr": 0.4163424124513619,
+        "tpr": 0.7412587412587412
+      },
+      {
+        "fpr": 0.4357976653696498,
+        "tpr": 0.7692307692307693
+      },
+      {
+        "fpr": 0.5019455252918288,
+        "tpr": 0.7972027972027972
+      },
+      {
+        "fpr": 0.5291828793774319,
+        "tpr": 0.8181818181818182
+      },
+      {
+        "fpr": 0.556420233463035,
+        "tpr": 0.8321678321678322
+      },
+      {
+        "fpr": 0.6070038910505836,
+        "tpr": 0.8531468531468531
+      },
+      {
+        "fpr": 0.6848249027237354,
+        "tpr": 0.8811188811188811
+      },
+      {
+        "fpr": 0.7159533073929961,
+        "tpr": 0.916083916083916
+      },
+      {
+        "fpr": 0.7509727626459144,
+        "tpr": 0.9370629370629371
+      },
+      {
+        "fpr": 0.8054474708171206,
+        "tpr": 0.958041958041958
+      },
+      {
+        "fpr": 0.8754863813229572,
+        "tpr": 0.9790209790209791
+      },
+      {
+        "fpr": 0.9961089494163424,
+        "tpr": 1.0
+      }
+    ]
+  },
+  "test": {
+    "accuracy": 0.67,
+    "precision": 0.5224489795918368,
+    "recall": 0.8951048951048951,
+    "f1": 0.6597938144329897,
+    "roc_auc": 0.8102228510788821,
+    "average_precision": 0.7246080512303229,
+    "confusion_matrix": [
+      [
+        140,
+        117
+      ],
+      [
+        15,
+        128
+      ]
+    ],
+    "roc": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.011673151750972763,
+        "tpr": 0.14685314685314685
+      },
+      {
+        "fpr": 0.019455252918287938,
+        "tpr": 0.2867132867132867
+      },
+      {
+        "fpr": 0.05058365758754864,
+        "tpr": 0.3076923076923077
+      },
+      {
+        "fpr": 0.058365758754863814,
+        "tpr": 0.35664335664335667
+      },
+      {
+        "fpr": 0.07392996108949416,
+        "tpr": 0.40559440559440557
+      },
+      {
+        "fpr": 0.10505836575875487,
+        "tpr": 0.4405594405594406
+      },
+      {
+        "fpr": 0.12062256809338522,
+        "tpr": 0.5104895104895105
+      },
+      {
+        "fpr": 0.12840466926070038,
+        "tpr": 0.5454545454545454
+      },
+      {
+        "fpr": 0.14396887159533073,
+        "tpr": 0.5804195804195804
+      },
+      {
+        "fpr": 0.15953307392996108,
+        "tpr": 0.6013986013986014
+      },
+      {
+        "fpr": 0.1828793774319066,
+        "tpr": 0.6293706293706294
+      },
+      {
+        "fpr": 0.19066147859922178,
+        "tpr": 0.6783216783216783
+      },
+      {
+        "fpr": 0.2178988326848249,
+        "tpr": 0.6993006993006993
+      },
+      {
+        "fpr": 0.23346303501945526,
+        "tpr": 0.7202797202797203
+      },
+      {
+        "fpr": 0.2723735408560311,
+        "tpr": 0.7482517482517482
+      },
+      {
+        "fpr": 0.29571984435797666,
+        "tpr": 0.7762237762237763
+      },
+      {
+        "fpr": 0.3346303501945525,
+        "tpr": 0.7902097902097902
+      },
+      {
+        "fpr": 0.35019455252918286,
+        "tpr": 0.8251748251748252
+      },
+      {
+        "fpr": 0.38132295719844356,
+        "tpr": 0.8461538461538461
+      },
+      {
+        "fpr": 0.41245136186770426,
+        "tpr": 0.8601398601398601
+      },
+      {
+        "fpr": 0.4357976653696498,
+        "tpr": 0.8811188811188811
+      },
+      {
+        "fpr": 0.5058365758754864,
+        "tpr": 0.8951048951048951
+      },
+      {
+        "fpr": 0.5252918287937743,
+        "tpr": 0.916083916083916
+      },
+      {
+        "fpr": 0.5992217898832685,
+        "tpr": 0.9300699300699301
+      },
+      {
+        "fpr": 0.6653696498054474,
+        "tpr": 0.951048951048951
+      },
+      {
+        "fpr": 0.867704280155642,
+        "tpr": 0.972027972027972
+      },
+      {
+        "fpr": 0.9182879377431906,
+        "tpr": 0.993006993006993
+      }
+    ]
+  },
+  "feature_importance": {
+    "amount": 0.14094281800759084,
+    "transaction_age_days": 0.0513767606557737,
+    "gold_customer": 0.006076490555874204,
+    "previous_complaints": 0.04731233579243465,
+    "resolution_attempts": 0.018813145171446596,
+    "vulnerable": 0.3026592658825307,
+    "fraud_flag": 0.18132302160088834,
+    "evidence_completeness": 0.21257542288762957,
+    "previous_escalations": 0.0333315594914116,
+    "web_channel": 0.005589179954419749
+  },
+  "failure_cases": [
+    {
+      "row_id": 948,
+      "actual": 0,
+      "probability": 0.6641029031680679,
+      "features": {
+        "amount": 698.3877400848901,
+        "transaction_age_days": 61.0,
+        "gold_customer": 1.0,
+        "previous_complaints": 1.0,
+        "resolution_attempts": 1.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 1.0,
+        "evidence_completeness": 0.46896303731594613,
+        "previous_escalations": 0.0,
+        "web_channel": 0.0
+      }
+    },
+    {
+      "row_id": 643,
+      "actual": 0,
+      "probability": 0.36845795827221106,
+      "features": {
+        "amount": 2384.4671271702177,
+        "transaction_age_days": 85.0,
+        "gold_customer": 1.0,
+        "previous_complaints": 2.0,
+        "resolution_attempts": 2.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.23668250287022385,
+        "previous_escalations": 0.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 752,
+      "actual": 0,
+      "probability": 0.6168170333389807,
+      "features": {
+        "amount": 2129.4404330844295,
+        "transaction_age_days": 74.0,
+        "gold_customer": 1.0,
+        "previous_complaints": 2.0,
+        "resolution_attempts": 4.0,
+        "vulnerable": 1.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.6543062077929398,
+        "previous_escalations": 0.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 1972,
+      "actual": 0,
+      "probability": 0.3671011772258895,
+      "features": {
+        "amount": 1041.1598106383349,
+        "transaction_age_days": 71.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 0.0,
+        "resolution_attempts": 3.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.3425594997735182,
+        "previous_escalations": 0.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 775,
+      "actual": 0,
+      "probability": 0.28922202709507144,
+      "features": {
+        "amount": 889.528856955805,
+        "transaction_age_days": 23.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 1.0,
+        "resolution_attempts": 2.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.38120565304818954,
+        "previous_escalations": 3.0,
+        "web_channel": 0.0
+      }
+    },
+    {
+      "row_id": 1864,
+      "actual": 0,
+      "probability": 0.37688011172283453,
+      "features": {
+        "amount": 2390.4151071682286,
+        "transaction_age_days": 93.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 2.0,
+        "resolution_attempts": 1.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.25233982009095357,
+        "previous_escalations": 0.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 1782,
+      "actual": 0,
+      "probability": 0.40293439754473753,
+      "features": {
+        "amount": 1056.2667844617679,
+        "transaction_age_days": 95.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 1.0,
+        "resolution_attempts": 1.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.33973823064525255,
+        "previous_escalations": 1.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 406,
+      "actual": 0,
+      "probability": 0.8198894847905989,
+      "features": {
+        "amount": 913.8677877195753,
+        "transaction_age_days": 20.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 2.0,
+        "resolution_attempts": 1.0,
+        "vulnerable": 1.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.40279361057761154,
+        "previous_escalations": 0.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 1764,
+      "actual": 0,
+      "probability": 0.4090086231012901,
+      "features": {
+        "amount": 1440.6500814233739,
+        "transaction_age_days": 0.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 1.0,
+        "resolution_attempts": 3.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.2143211252486128,
+        "previous_escalations": 0.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 293,
+      "actual": 0,
+      "probability": 0.2707539758173951,
+      "features": {
+        "amount": 2384.1111846764475,
+        "transaction_age_days": 69.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 3.0,
+        "resolution_attempts": 1.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.954768980773522,
+        "previous_escalations": 1.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 137,
+      "actual": 0,
+      "probability": 0.3742051533523404,
+      "features": {
+        "amount": 1150.8624471190012,
+        "transaction_age_days": 56.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 1.0,
+        "resolution_attempts": 0.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.25588960235401736,
+        "previous_escalations": 0.0,
+        "web_channel": 1.0
+      }
+    },
+    {
+      "row_id": 715,
+      "actual": 0,
+      "probability": 0.3353883406361617,
+      "features": {
+        "amount": 2694.0884501561145,
+        "transaction_age_days": 43.0,
+        "gold_customer": 0.0,
+        "previous_complaints": 1.0,
+        "resolution_attempts": 4.0,
+        "vulnerable": 0.0,
+        "fraud_flag": 0.0,
+        "evidence_completeness": 0.1066099662886214,
+        "previous_escalations": 0.0,
+        "web_channel": 0.0
+      }
+    }
+  ]
+}

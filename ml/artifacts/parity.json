@@ -1,0 +1,552 @@
+[
+  {
+    "features": {
+      "product": "Credit reporting, credit repair services, or other personal consumer reports",
+      "sub_product": "Credit reporting",
+      "issue": "Incorrect information on your report",
+      "sub_issue": "Information belongs to someone else",
+      "submitted_via": "Web",
+      "company_key": "c7410341180766e8"
+    },
+    "probability": 0.004264947810650194
+  },
+  {
+    "features": {
+      "product": "Credit reporting, credit repair services, or other personal consumer reports",
+      "sub_product": "Credit reporting",
+      "issue": "Problem with a credit reporting company's investigation into an existing problem",
+      "sub_issue": "Their investigation did not fix an error on your report",
+      "submitted_via": "Web",
+      "company_key": "eb1b2cc2b623595d"
+    },
+    "probability": 0.001327602051282382
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "5e3fd101d3df4550"
+    },
+    "probability": 0.02581422281985849
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "Other debt",
+      "issue": "Attempts to collect debt not owed",
+      "sub_issue": "Debt is not yours",
+      "submitted_via": "Phone",
+      "company_key": "55878a79705d80fc"
+    },
+    "probability": 0.007587986266191198
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Problem with a purchase shown on your statement",
+      "sub_issue": "Credit card company isn't resolving a dispute about a purchase on your statement",
+      "submitted_via": "Web",
+      "company_key": "30c0f02d203e623b"
+    },
+    "probability": 0.03127565116955252
+  },
+  {
+    "features": {
+      "product": "Credit reporting, credit repair services, or other personal consumer reports",
+      "sub_product": "Credit reporting",
+      "issue": "Problem with fraud alerts or security freezes",
+      "sub_issue": "__missing__",
+      "submitted_via": "Postal mail",
+      "company_key": "c7410341180766e8"
+    },
+    "probability": 0.002381400892325216
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "VA mortgage",
+      "issue": "Applying for a mortgage or refinancing an existing mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "30e08802cfc75fd8"
+    },
+    "probability": 0.011299580742589264
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "I do not know",
+      "issue": "Attempts to collect debt not owed",
+      "sub_issue": "Debt is not yours",
+      "submitted_via": "Web",
+      "company_key": "2e3c2d70fa36d44d"
+    },
+    "probability": 0.036360577825491534
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Applying for a mortgage or refinancing an existing mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "46dc328034b44bc4"
+    },
+    "probability": 0.02581422281985849
+  },
+  {
+    "features": {
+      "product": "Payday loan, title loan, or personal loan",
+      "sub_product": "Installment loan",
+      "issue": "Charged fees or interest you didn't expect",
+      "sub_issue": "__missing__",
+      "submitted_via": "Postal mail",
+      "company_key": "36c265e034a1c8e6"
+    },
+    "probability": 0.018645700075489827
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "71f5f0f2aefd6abb"
+    },
+    "probability": 0.0030610488522843675
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Other features, terms, or problems",
+      "sub_issue": "Other problem",
+      "submitted_via": "Postal mail",
+      "company_key": "355670857e012c09"
+    },
+    "probability": 0.005642428229449109
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "0343bfb49f7ce9c1"
+    },
+    "probability": 0.00027037812168208264
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Reverse mortgage",
+      "issue": "Applying for a mortgage or refinancing an existing mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "699daf58d1744675"
+    },
+    "probability": 0.060746208444135204
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Applying for a mortgage or refinancing an existing mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "608131e18baf3167"
+    },
+    "probability": 0.005515097304986233
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "I do not know",
+      "issue": "False statements or representation",
+      "sub_issue": "Indicated you were committing crime by not paying debt",
+      "submitted_via": "Web",
+      "company_key": "b4d2ea26a8efbb1a"
+    },
+    "probability": 0.04578448796712431
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "Auto debt",
+      "issue": "Attempts to collect debt not owed",
+      "sub_issue": "Debt is not yours",
+      "submitted_via": "Web",
+      "company_key": "976428864608d28b"
+    },
+    "probability": 0.04507164474543383
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Closing your account",
+      "sub_issue": "Can't close your account",
+      "submitted_via": "Referral",
+      "company_key": "3ec3792123ffa5da"
+    },
+    "probability": 0.009387088753469648
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "d8987d494a7c779a"
+    },
+    "probability": 0.023784578629010674
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "11c19aaa5335a868"
+    },
+    "probability": 0.0009077726420920728
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "3ec3792123ffa5da"
+    },
+    "probability": 0.006062683566984482
+  },
+  {
+    "features": {
+      "product": "Credit reporting, credit repair services, or other personal consumer reports",
+      "sub_product": "Credit reporting",
+      "issue": "Incorrect information on your report",
+      "sub_issue": "Information belongs to someone else",
+      "submitted_via": "Web",
+      "company_key": "eb1b2cc2b623595d"
+    },
+    "probability": 0.001327602051282382
+  },
+  {
+    "features": {
+      "product": "Checking or savings account",
+      "sub_product": "Checking account",
+      "issue": "Problem with a lender or other company charging your account",
+      "sub_issue": "Transaction was not authorized",
+      "submitted_via": "Web",
+      "company_key": "340e305d665f12dd"
+    },
+    "probability": 0.06813106545697967
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "Medical debt",
+      "issue": "Attempts to collect debt not owed",
+      "sub_issue": "Debt was paid",
+      "submitted_via": "Web",
+      "company_key": "5e6e96573c5eadd3"
+    },
+    "probability": 0.07448135074859556
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Fax",
+      "company_key": "355670857e012c09"
+    },
+    "probability": 0.00268239135855334
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "04932314631b29d9"
+    },
+    "probability": 0.001639025676188767
+  },
+  {
+    "features": {
+      "product": "Student loan",
+      "sub_product": "Federal student loan servicing",
+      "issue": "Dealing with your lender or servicer",
+      "sub_issue": "Don't agree with the fees charged",
+      "submitted_via": "Web",
+      "company_key": "4cfddf1b32047d5a"
+    },
+    "probability": 0.024080221086187757
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Getting a credit card",
+      "sub_issue": "Sent card you never applied for",
+      "submitted_via": "Referral",
+      "company_key": "75a0f9aa2d8a6052"
+    },
+    "probability": 0.003615851037335772
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Problem when making payments",
+      "sub_issue": "Problem during payment process",
+      "submitted_via": "Referral",
+      "company_key": "09f93f7373782ba3"
+    },
+    "probability": 0.00024589842204847303
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "I do not know",
+      "issue": "Communication tactics",
+      "sub_issue": "Frequent or repeated calls",
+      "submitted_via": "Referral",
+      "company_key": "377b2daaf1c34c55"
+    },
+    "probability": 0.025570410754987588
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "Mortgage debt",
+      "issue": "Communication tactics",
+      "sub_issue": "Frequent or repeated calls",
+      "submitted_via": "Referral",
+      "company_key": "8eb649f1db2b5ba2"
+    },
+    "probability": 0.04539859596715761
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Problem with a purchase shown on your statement",
+      "sub_issue": "Credit card company isn't resolving a dispute about a purchase on your statement",
+      "submitted_via": "Referral",
+      "company_key": "0343bfb49f7ce9c1"
+    },
+    "probability": 0.00041997901244253996
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Referral",
+      "company_key": "3ec3792123ffa5da"
+    },
+    "probability": 0.006062683566984482
+  },
+  {
+    "features": {
+      "product": "Checking or savings account",
+      "sub_product": "Checking account",
+      "issue": "Managing an account",
+      "sub_issue": "Deposits and withdrawals",
+      "submitted_via": "Referral",
+      "company_key": "675fb61c78186065"
+    },
+    "probability": 0.003548913418223701
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Other features, terms, or problems",
+      "sub_issue": "Other problem",
+      "submitted_via": "Referral",
+      "company_key": "0343bfb49f7ce9c1"
+    },
+    "probability": 0.00041997901244253996
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Applying for a mortgage or refinancing an existing mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "1d99f4b8e4b37aab"
+    },
+    "probability": 0.02581422281985849
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Conventional home mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Phone",
+      "company_key": "481c31bdac900b34"
+    },
+    "probability": 0.01834044981352225
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose prepaid card",
+      "issue": "Trouble using the card",
+      "sub_issue": "Trouble using the card to spend money in a store or online",
+      "submitted_via": "Web",
+      "company_key": "d419bc9841452713"
+    },
+    "probability": 0.002605970374829731
+  },
+  {
+    "features": {
+      "product": "Student loan",
+      "sub_product": "Federal student loan servicing",
+      "issue": "Dealing with your lender or servicer",
+      "sub_issue": "Received bad information about your loan",
+      "submitted_via": "Phone",
+      "company_key": "9f09fe2d51dfa0f2"
+    },
+    "probability": 0.019870980699773624
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Postal mail",
+      "company_key": "77b2f3d7a0fdbe51"
+    },
+    "probability": 0.0050077923619563595
+  },
+  {
+    "features": {
+      "product": "Debt collection",
+      "sub_product": "Auto debt",
+      "issue": "Attempts to collect debt not owed",
+      "sub_issue": "Debt is not yours",
+      "submitted_via": "Web",
+      "company_key": "a6b1c92a2835b2aa"
+    },
+    "probability": 0.04507164474543383
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Postal mail",
+      "company_key": "d8ce778dcd521f7e"
+    },
+    "probability": 0.014441878181047484
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Struggling to pay mortgage",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "11c19aaa5335a868"
+    },
+    "probability": 0.0015467328022139588
+  },
+  {
+    "features": {
+      "product": "Vehicle loan or lease",
+      "sub_product": "Loan",
+      "issue": "Managing the loan or lease",
+      "sub_issue": "Problem with the interest rate",
+      "submitted_via": "Postal mail",
+      "company_key": "ff8174d1ebedbb48"
+    },
+    "probability": 0.06361919956282731
+  },
+  {
+    "features": {
+      "product": "Payday loan, title loan, or personal loan",
+      "sub_product": "Installment loan",
+      "issue": "Problem when making payments",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "c1660dc00047512b"
+    },
+    "probability": 0.014264441726055975
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "FHA mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "d873f35c55bdfe78"
+    },
+    "probability": 0.016271573199916168
+  },
+  {
+    "features": {
+      "product": "Mortgage",
+      "sub_product": "Other type of mortgage",
+      "issue": "Trouble during payment process",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "e77a35ad41fc4452"
+    },
+    "probability": 0.02581422281985849
+  },
+  {
+    "features": {
+      "product": "Student loan",
+      "sub_product": "Federal student loan servicing",
+      "issue": "Dealing with your lender or servicer",
+      "sub_issue": "Received bad information about your loan",
+      "submitted_via": "Phone",
+      "company_key": "f5209b756bff3612"
+    },
+    "probability": 0.011010421199562664
+  },
+  {
+    "features": {
+      "product": "Credit reporting, credit repair services, or other personal consumer reports",
+      "sub_product": "Credit reporting",
+      "issue": "Improper use of your report",
+      "sub_issue": "Reporting company used your report improperly",
+      "submitted_via": "Web",
+      "company_key": "fefe918f9ae967c0"
+    },
+    "probability": 0.02431060601730534
+  },
+  {
+    "features": {
+      "product": "Credit card or prepaid card",
+      "sub_product": "General-purpose credit card or charge card",
+      "issue": "Other features, terms, or problems",
+      "sub_issue": "Problem with balance transfer",
+      "submitted_via": "Referral",
+      "company_key": "18eaa97390a0d81b"
+    },
+    "probability": 0.023575500871024592
+  }
+]

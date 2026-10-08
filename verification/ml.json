@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-07T23:28:56.911658+00:00",
+  "dataset_hash_verified": true,
+  "temporal_splits_verified": true,
+  "artifact_metrics_reproduced_without_training": true,
+  "raw_prediction_parity_vectors": 50,
+  "test": {
+    "accuracy": 0.84425,
+    "precision": 0.09682299546142209,
+    "recall": 0.7111111111111111,
+    "f1": 0.170439414114514,
+    "roc_auc": 0.8807686842853084,
+    "average_precision": 0.14130822235977722,
+    "brier_score": 0.022722757417127377,
+    "confusion_matrix": [
+      [
+        3313,
+        597
+      ],
+      [
+        26,
+        64
+      ]
+    ],
+    "support": 4000,
+    "positive_support": 90,
+    "positive_rate": 0.0225,
+    "threshold": 0.024436689771929164
+  }
+}

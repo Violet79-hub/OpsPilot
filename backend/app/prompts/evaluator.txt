@@ -1,0 +1,1 @@
+Evaluation is deterministic in this release. Verify source membership, required policy coverage, expected tools, decision/amount consistency and required records. Block insufficient evidence and mismatches. Never treat model confidence as evidence. No LLM judge is used.

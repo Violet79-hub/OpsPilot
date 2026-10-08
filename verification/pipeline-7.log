@@ -1,0 +1,30 @@
+PASS Real D1 schema and lazy seed
+PASS Twelve synthetic demo cases execute real retrieval, trained-model scoring or abstention, and human review
+PASS Missing model key refuses live run without simulated result
+PASS New task executes LangGraph and persists actual tool evidence
+PASS Reload retrieves durable answer and seven graph events
+PASS Other session cannot read run
+PASS Concurrent approvals create exactly one action and one revision
+PASS Duplicate execution is rejected
+PASS Missing evidence blocks approval
+PASS Reference uploads persist privately and never gain policy trust
+PASS Prompt injection cannot bypass risk hold
+PASS 30 golden cases pass decision, amount, citations, tool coverage and guardrails
+PASS Evaluation results stored and reloadable
+PASS Cross-origin mutation refused
+PASS MOCKED provider contract: structured plan + embedding index + query + answer
+PASS MOCKED provider outage persists failed state and cannot be approved
+PASS 50 exported vectors validate parity for supported inputs and abstention for unsupported inputs
+PASS Out-of-domain abstention and outcome-feature rejection
+PASS Agent executes trained model only for supported complaints, records timings and requires review
+PASS Missing complaint evidence blocks workflow
+PASS 24 independent retrieval cases measured and persisted with session isolation
+PASS Monitoring derives latency, blocks, failures and usage from actual stored runs
+PASS New complaint saves to D1 and remains session-private
+PASS Submitted complaint flows through policy, trained ML and human review
+PASS Another session cannot retrieve a private complaint through agent tools
+PASS Complaint intake rejects ownership and unsupported fields
+PASS Thirty financial regression cases: model scoring, abstention, missing evidence and instruction attack
+PASS Information request blocks stale approval and pauses model inference
+PASS Evidence versioning, access isolation and resumed assessment preserve review integrity
+{"passed":29,"golden_passed":30,"live_model_verified":false}

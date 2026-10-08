@@ -1,0 +1,30 @@
+{
+  "source": "CFPB public Consumer Complaint Database",
+  "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/",
+  "downloaded_at": "2026-10-07T10:17:48.714191+00:00",
+  "requests": [
+    "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2015-01-01&date_received_max=2015-06-30",
+    "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2015-07-01&date_received_max=2015-12-31",
+    "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2016-01-01&date_received_max=2016-06-30",
+    "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2016-07-01&date_received_max=2016-12-31",
+    "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2017-01-01&date_received_max=2017-06-30"
+  ],
+  "rows": 20000,
+  "sha256": "f6991624b7a9c9f04c59396ddf7b9c949d970632b0ec37ad575e9a6cbc0d6e02",
+  "label": "timely=No; response-delay outcome, not actual escalation or fraud",
+  "retained_fields": [
+    "complaint_id",
+    "date_received",
+    "product",
+    "sub_product",
+    "issue",
+    "sub_issue",
+    "submitted_via",
+    "timely",
+    "company_key"
+  ],
+  "sampling": "First 4000 API results per half-year window, 2015\u20132017. Convenience sample, not population representative. Recent pilot had only 66 positives/16000 and was rejected.",
+  "feature_engineering": "Stable SHA256 company category (16 hex characters); company identity is known before response, unlike outcome fields. No company response or response date features.",
+  "excluded": "Narratives, company names, locations, personal fields and all response/resolution fields excluded from features",
+  "limitations": "Historical US financial complaint domain only; no retail transfer or current risk calibration"
+}

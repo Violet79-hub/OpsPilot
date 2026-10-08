@@ -1,0 +1,53 @@
+{
+  "refund": {
+    "section": "3.2 Refund eligibility",
+    "rules": {
+      "window_days": 30,
+      "restocking_rate": 0.15
+    }
+  },
+  "shipping": {
+    "section": "2.1 Delivery investigation",
+    "rules": {}
+  },
+  "warranty": {
+    "section": "4.1 Hardware defects",
+    "rules": {
+      "warranty_days": 365
+    }
+  },
+  "vip": {
+    "section": "2.2 Gold return extension",
+    "rules": {
+      "gold_window_days": 45
+    }
+  },
+  "support": {
+    "section": "1.1 Evidence and case handling",
+    "rules": {}
+  },
+  "escalation": {
+    "section": "5.1 Manual review",
+    "rules": {
+      "max_refund_usd": 1500
+    }
+  },
+  "privacy": {
+    "section": "6.1 Identity and disclosure",
+    "rules": {}
+  },
+  "cancellation": {
+    "section": "7.1 Subscription refunds",
+    "rules": {
+      "subscription_days": 7
+    }
+  },
+  "returns": {
+    "section": "3.1 Condition verification",
+    "rules": {}
+  },
+  "fraud": {
+    "section": "8.1 Risk holds",
+    "rules": {}
+  }
+}

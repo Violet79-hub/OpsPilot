@@ -1,0 +1,429 @@
+{
+  "generated_at": "2026-10-07T10:15:20.769146+00:00",
+  "model_version": "cfpb-delay-v1",
+  "dataset": {
+    "source": "CFPB public Consumer Complaint Database",
+    "source_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/",
+    "downloaded_at": "2026-10-07T10:13:07.989480+00:00",
+    "requests": [
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2015-01-01&date_received_max=2015-06-30",
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2015-07-01&date_received_max=2015-12-31",
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2016-01-01&date_received_max=2016-06-30",
+      "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=4000&date_received_min=2016-07-01&date_received_max=2016-12-31"
+    ],
+    "rows": 16000,
+    "sha256": "eb5a7c06136bb1ea9fd64148c48c11058328607e659bcb050dbca474cfd403ee",
+    "label": "timely=No; response-delay outcome, not actual escalation or fraud",
+    "retained_fields": [
+      "complaint_id",
+      "date_received",
+      "product",
+      "sub_product",
+      "issue",
+      "sub_issue",
+      "submitted_via",
+      "timely"
+    ],
+    "sampling": "First 4000 API results per half-year window, 2015\u20132016. Convenience sample, not population representative. Recent 2023\u20132024 pilot had only 66 positive cases/16000 and was rejected for insufficient support.",
+    "excluded": "Narratives, company names, locations, personal fields and all response/resolution fields excluded from features",
+    "limitations": "Historical US financial complaint domain only; do not transfer probabilities to retail refunds or current populations"
+  },
+  "task": "Response-delay triage for historical US financial complaints; NOT fraud or refund entitlement",
+  "features": [
+    "product",
+    "sub_product",
+    "issue",
+    "sub_issue",
+    "submitted_via"
+  ],
+  "split": {
+    "method": "chronological, no refit on validation/test",
+    "train": {
+      "rows": 8000,
+      "positives": 241,
+      "start": "2015-06-22T18:42:02.000Z",
+      "end": "2015-12-31T23:53:22.000Z"
+    },
+    "validation": {
+      "rows": 4000,
+      "positives": 92,
+      "start": "2016-06-23T04:08:17.000Z",
+      "end": "2016-06-30T23:58:43.000Z"
+    },
+    "test": {
+      "rows": 4000,
+      "positives": 163,
+      "start": "2016-08-15T21:57:06.000Z",
+      "end": "2016-12-31T23:56:18.000Z"
+    }
+  },
+  "baseline": {
+    "algorithm": "Dummy prior, threshold 0.5",
+    "test": {
+      "accuracy": 0.95925,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.04075,
+      "brier_score": 0.039202328125000005,
+      "confusion_matrix": [
+        [
+          3837,
+          0
+        ],
+        [
+          163,
+          0
+        ]
+      ],
+      "support": 4000,
+      "positive_support": 163,
+      "positive_rate": 0.04075,
+      "threshold": 0.5
+    }
+  },
+  "experiments": [
+    {
+      "model": "LogisticRegression C=0.1",
+      "validation": {
+        "accuracy": 0.8785,
+        "precision": 0.08958333333333333,
+        "recall": 0.4673913043478261,
+        "f1": 0.15034965034965034,
+        "roc_auc": 0.7847044524053225,
+        "average_precision": 0.07420276947087949,
+        "brier_score": 0.021971408154269064,
+        "confusion_matrix": [
+          [
+            3471,
+            437
+          ],
+          [
+            49,
+            43
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 92,
+        "positive_rate": 0.023,
+        "threshold": 0.07951417571313903
+      }
+    },
+    {
+      "model": "LogisticRegression C=1.0",
+      "validation": {
+        "accuracy": 0.92475,
+        "precision": 0.10266159695817491,
+        "recall": 0.29347826086956524,
+        "f1": 0.15211267605633802,
+        "roc_auc": 0.786097915090561,
+        "average_precision": 0.07726141123095188,
+        "brier_score": 0.022582223042959038,
+        "confusion_matrix": [
+          [
+            3672,
+            236
+          ],
+          [
+            65,
+            27
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 92,
+        "positive_rate": 0.023,
+        "threshold": 0.11339696860341107
+      }
+    },
+    {
+      "model": "LogisticRegression C=10.0",
+      "validation": {
+        "accuracy": 0.91425,
+        "precision": 0.09646302250803858,
+        "recall": 0.32608695652173914,
+        "f1": 0.1488833746898263,
+        "roc_auc": 0.7698992590449915,
+        "average_precision": 0.07109069784512795,
+        "brier_score": 0.023596366891571567,
+        "confusion_matrix": [
+          [
+            3627,
+            281
+          ],
+          [
+            62,
+            30
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 92,
+        "positive_rate": 0.023,
+        "threshold": 0.11507609215335017
+      }
+    },
+    {
+      "model": "RandomForest depth=6",
+      "validation": {
+        "accuracy": 0.87775,
+        "precision": 0.08559498956158663,
+        "recall": 0.44565217391304346,
+        "f1": 0.1436077057793345,
+        "roc_auc": 0.7885316074050999,
+        "average_precision": 0.07780430237603124,
+        "brier_score": 0.021816939924576177,
+        "confusion_matrix": [
+          [
+            3470,
+            438
+          ],
+          [
+            51,
+            41
+          ]
+        ],
+        "support": 4000,
+        "positive_support": 92,
+        "positive_rate": 0.023,
+        "threshold": 0.07751362729654092
+      }
+    }
+  ],
+  "selected_model": "RandomForest depth=6",
+  "validation": {
+    "accuracy": 0.87775,
+    "precision": 0.08559498956158663,
+    "recall": 0.44565217391304346,
+    "f1": 0.1436077057793345,
+    "roc_auc": 0.7885316074050999,
+    "average_precision": 0.07780430237603124,
+    "brier_score": 0.021816939924576177,
+    "confusion_matrix": [
+      [
+        3470,
+        438
+      ],
+      [
+        51,
+        41
+      ]
+    ],
+    "support": 4000,
+    "positive_support": 92,
+    "positive_rate": 0.023,
+    "threshold": 0.07751362729654092
+  },
+  "test": {
+    "accuracy": 0.838,
+    "precision": 0.08117443868739206,
+    "recall": 0.2883435582822086,
+    "f1": 0.12668463611859837,
+    "roc_auc": 0.6724274940001373,
+    "average_precision": 0.08826914779078027,
+    "brier_score": 0.038776758652657596,
+    "confusion_matrix": [
+      [
+        3305,
+        532
+      ],
+      [
+        116,
+        47
+      ]
+    ],
+    "support": 4000,
+    "positive_support": 163,
+    "positive_rate": 0.04075,
+    "threshold": 0.07751362729654092
+  },
+  "test_unseen_category_fraction": 0.00445,
+  "failure_cases": [
+    {
+      "record_id": "2262142",
+      "features": {
+        "product": "Credit reporting",
+        "sub_product": "__missing__",
+        "issue": "Incorrect information on credit report",
+        "sub_issue": "Public record",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.01054687005872274,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2269270",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Transaction issue",
+        "sub_issue": "__missing__",
+        "submitted_via": "Referral"
+      },
+      "actual_delay": true,
+      "probability": 0.010707674046337014,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2270647",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Billing disputes",
+        "sub_issue": "__missing__",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.01190165634883594,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2267435",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Unsolicited issuance of credit card",
+        "sub_issue": "__missing__",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.012615566657445182,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2263714",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Application processing delay",
+        "sub_issue": "__missing__",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.01263225557600326,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2259969",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Credit line increase/decrease",
+        "sub_issue": "__missing__",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.01263225557600326,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2267718",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Payoff process",
+        "sub_issue": "__missing__",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.01263225557600326,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2270321",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Billing statement",
+        "sub_issue": "__missing__",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.01263225557600326,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2270644",
+      "features": {
+        "product": "Credit card",
+        "sub_product": "__missing__",
+        "issue": "Payoff process",
+        "sub_issue": "__missing__",
+        "submitted_via": "Web"
+      },
+      "actual_delay": true,
+      "probability": 0.01263225557600326,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2266712",
+      "features": {
+        "product": "Bank account or service",
+        "sub_product": "Checking account",
+        "issue": "Account opening, closing, or management",
+        "sub_issue": "__missing__",
+        "submitted_via": "Phone"
+      },
+      "actual_delay": true,
+      "probability": 0.012721506789933942,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2262593",
+      "features": {
+        "product": "Bank account or service",
+        "sub_product": "Checking account",
+        "issue": "Account opening, closing, or management",
+        "sub_issue": "__missing__",
+        "submitted_via": "Phone"
+      },
+      "actual_delay": true,
+      "probability": 0.012721506789933942,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    },
+    {
+      "record_id": "2269781",
+      "features": {
+        "product": "Bank account or service",
+        "sub_product": "Other bank product/service",
+        "issue": "Account opening, closing, or management",
+        "sub_issue": "__missing__",
+        "submitted_via": "Phone"
+      },
+      "actual_delay": true,
+      "probability": 0.01298696501900248,
+      "predicted_delay": false,
+      "category": "ML classification error",
+      "improvement": "Collect current, representative complaint outcomes; compare calibrated models and investigate category drift."
+    }
+  ],
+  "promotion": {
+    "status": "shadow_only",
+    "statistical_gate_passed": true,
+    "reason": "Historical convenience sample and temporal/domain shift; no current deployment validation. Scores are reviewer context only and never authorize refunds, fraud labels or external actions."
+  },
+  "training_seconds": 1.492170401000294,
+  "selection": "Highest validation average precision; threshold maximizes validation F1; test evaluated once after selection."
+}

@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791365196927,
+      "tag": "0000_melted_logan",
+      "breakpoints": true
+    }
+  ]
+}

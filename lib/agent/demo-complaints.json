@@ -1,0 +1,600 @@
+[
+  {
+    "id": "CP-101",
+    "title": "High-value refund with conflicting evidence",
+    "synthetic": true,
+    "summary": "Emma Chen disputes a $1,250 transaction and says the service was never delivered. The merchant supplies a completion record; the customer disputes its signature.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Identity theft / Fraud / Embezzlement",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-101",
+    "transaction_id": "TX-101",
+    "account_id": "AC-101",
+    "amount": 1250,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "High",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-101-1",
+        "name": "Customer statement",
+        "text": "Emma Chen disputes a $1,250 transaction and says the service was never delivered. The merchant supplies a completion record; the customer disputes its signature.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-101-2",
+        "name": "Merchant record",
+        "text": "Signed completion record supplied",
+        "status": "synthetic disputed evidence"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_vulnerable"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-102",
+    "title": "Refund dispute",
+    "synthetic": true,
+    "summary": "A cardholder says a merchant promised a reversal but the disputed charge remains. The refund entitlement has not been established.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Billing disputes",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-102",
+    "transaction_id": "TX-102",
+    "account_id": "AC-102",
+    "amount": 180,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "awaiting_review",
+    "evidence": [
+      {
+        "id": "EV-102-1",
+        "name": "Customer statement",
+        "text": "A cardholder says a merchant promised a reversal but the disputed charge remains. The refund entitlement has not been established.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-102-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-103",
+    "title": "Service complaint",
+    "synthetic": true,
+    "summary": "A customer reports repeated unsuccessful attempts to resolve an account service issue.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Bank account or service",
+      "sub_product": "Checking account",
+      "issue": "Customer service / Customer relations",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-103",
+    "transaction_id": "TX-103",
+    "account_id": "AC-103",
+    "amount": 40,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "awaiting_review",
+    "evidence": [
+      {
+        "id": "EV-103-1",
+        "name": "Customer statement",
+        "text": "A customer reports repeated unsuccessful attempts to resolve an account service issue.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-103-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-104",
+    "title": "Suspected scam",
+    "synthetic": true,
+    "summary": "A customer reports a transfer following a suspicious request. The allegation requires investigation; this model does not predict fraud.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Money transfers",
+      "sub_product": "Domestic (US) money transfer",
+      "issue": "Fraud or scam",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-104",
+    "transaction_id": "TX-104",
+    "account_id": "AC-104",
+    "amount": 700,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "High",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-104-1",
+        "name": "Customer statement",
+        "text": "A customer reports a transfer following a suspicious request. The allegation requires investigation; this model does not predict fraud.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-104-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_fraud"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-105",
+    "title": "Privacy complaint",
+    "synthetic": true,
+    "summary": "A customer disputes access to their credit report and requests a privacy investigation.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit reporting",
+      "sub_product": "__missing__",
+      "issue": "Improper use of my credit report",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-105",
+    "transaction_id": "TX-105",
+    "account_id": "AC-105",
+    "amount": 0,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "approved",
+    "evidence": [
+      {
+        "id": "EV-105-1",
+        "name": "Customer statement",
+        "text": "A customer disputes access to their credit report and requests a privacy investigation.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-105-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      },
+      {
+        "date": "2026-10-07",
+        "action": "Example prior review completed (fixture, not a live user action)",
+        "actor": "Synthetic reviewer"
+      }
+    ]
+  },
+  {
+    "id": "CP-106",
+    "title": "Unrecognised withdrawal",
+    "synthetic": true,
+    "summary": "A prepaid cardholder reports an unrecognised withdrawal and asks what evidence is required.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Prepaid card",
+      "sub_product": "General purpose card",
+      "issue": "Unauthorized transactions/trans. issues",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-106",
+    "transaction_id": "TX-106",
+    "account_id": "AC-106",
+    "amount": 230,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "approved",
+    "evidence": [
+      {
+        "id": "EV-106-1",
+        "name": "Customer statement",
+        "text": "A prepaid cardholder reports an unrecognised withdrawal and asks what evidence is required.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-106-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      },
+      {
+        "date": "2026-10-07",
+        "action": "Example prior review completed (fixture, not a live user action)",
+        "actor": "Synthetic reviewer"
+      }
+    ]
+  },
+  {
+    "id": "CP-107",
+    "title": "Vulnerable customer escalation",
+    "synthetic": true,
+    "summary": "Synthetic vulnerable customer escalation scenario requiring documented policy review.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Identity theft / Fraud / Embezzlement",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-107",
+    "transaction_id": "TX-107",
+    "account_id": "AC-107",
+    "amount": 450,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "High",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-107-1",
+        "name": "Customer statement",
+        "text": "Synthetic vulnerable customer escalation scenario requiring documented policy review.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-107-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_vulnerable"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-108",
+    "title": "Refund outside policy window",
+    "synthetic": true,
+    "summary": "Synthetic refund outside policy window scenario requiring documented policy review.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Identity theft / Fraud / Embezzlement",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-108",
+    "transaction_id": "TX-108",
+    "account_id": "AC-108",
+    "amount": 90,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-108-1",
+        "name": "Customer statement",
+        "text": "Synthetic refund outside policy window scenario requiring documented policy review.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-108-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-109",
+    "title": "VIP customer exception",
+    "synthetic": true,
+    "summary": "Synthetic vip customer exception scenario requiring documented policy review.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Identity theft / Fraud / Embezzlement",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-109",
+    "transaction_id": "TX-109",
+    "account_id": "AC-109",
+    "amount": 300,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-109-1",
+        "name": "Customer statement",
+        "text": "Synthetic vip customer exception scenario requiring documented policy review.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-109-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-110",
+    "title": "Missing evidence",
+    "synthetic": true,
+    "summary": "Synthetic missing evidence scenario requiring documented policy review.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Identity theft / Fraud / Embezzlement",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-110",
+    "transaction_id": "TX-110",
+    "account_id": "AC-110",
+    "amount": 210,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Medium",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-110-1",
+        "name": "Customer statement",
+        "text": "Synthetic missing evidence scenario requiring documented policy review.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-110-2",
+        "name": "Merchant record",
+        "text": "Not supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-111",
+    "title": "Duplicate charge",
+    "synthetic": true,
+    "summary": "Synthetic duplicate charge scenario requiring documented policy review.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Identity theft / Fraud / Embezzlement",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-111",
+    "transaction_id": "TX-111",
+    "account_id": "AC-111",
+    "amount": 85,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-111-1",
+        "name": "Customer statement",
+        "text": "Synthetic duplicate charge scenario requiring documented policy review.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-111-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  },
+  {
+    "id": "CP-112",
+    "title": "Subscription cancellation dispute",
+    "synthetic": true,
+    "summary": "Synthetic subscription cancellation dispute scenario requiring documented policy review.",
+    "source": "Synthetic demonstration complaint; not a real customer, account or allegation. Categories are analyst-supplied fixtures.",
+    "features": {
+      "product": "Credit card",
+      "sub_product": "__missing__",
+      "issue": "Identity theft / Fraud / Embezzlement",
+      "sub_issue": "__missing__",
+      "submitted_via": "Web",
+      "company_key": "0000000000000000"
+    },
+    "customer_id": "FC-112",
+    "transaction_id": "TX-112",
+    "account_id": "AC-112",
+    "amount": 60,
+    "currency": "USD",
+    "date": "2026-10-07",
+    "risk_level": "Low",
+    "sample_status": "unassessed",
+    "evidence": [
+      {
+        "id": "EV-112-1",
+        "name": "Customer statement",
+        "text": "Synthetic subscription cancellation dispute scenario requiring documented policy review.",
+        "status": "synthetic unverified statement"
+      },
+      {
+        "id": "EV-112-2",
+        "name": "Merchant record",
+        "text": "Receipt and service record supplied",
+        "status": "synthetic reference"
+      }
+    ],
+    "expected_policies": [
+      "complaint_triage",
+      "fin_evidence",
+      "fin_refund"
+    ],
+    "history": [
+      {
+        "date": "2026-10-07",
+        "action": "Synthetic fixture created",
+        "actor": "Demo seed"
+      }
+    ]
+  }
+]
