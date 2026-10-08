@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  ...(process.env.NETLIFY === "true"
+    ? { typescript: { tsconfigPath: "tsconfig.netlify.json" } }
+    : {}),
 };
 
 export default nextConfig;

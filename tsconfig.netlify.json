@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["next-env.d.ts", "app/**/*.ts", "app/**/*.tsx", "components/**/*.tsx", "hooks/**/*.ts", "lib/session-fetch.ts", "lib/utils.ts", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "examples", "build", "db", "vite.config.ts"]
+}

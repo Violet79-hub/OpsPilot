@@ -87,3 +87,11 @@ Node and total durations are measured. Provider tokens are recorded when returne
 
 ## AI usage disclosure
 AI assisted code, test and documentation development. Claims must be backed by this source and reproducible reports. Interview ownership should reflect engineering choices the author can explain and reproduce, not imply unaided implementation or production financial deployment.
+
+## Netlify deployment
+
+Connect this repository to Netlify. `netlify.toml` overrides the detected build settings with `pnpm exec next build --webpack` and `.next`, producing genuine Next.js output for Netlify's automatic Next.js adapter. The default `pnpm run build` still builds the original Vinext/Worker application for its existing hosting and verification workflow. Netlify uses a frontend-specific TypeScript config; type checking remains enabled.
+
+The Netlify function `netlify/functions/opspilot-api.mjs` owns `/api/*` and forwards requests to the existing public Worker backend at `https://opspilot-evaluated-demo.alexis707199.chatgpt.site`. It preserves the opaque session cookie on the Netlify domain, refuses cross-origin writes before forwarding and never forwards authentication cookies. Cases, assessments, model configuration and persistence remain in that backend's D1 database. The Netlify deployment depends on that backend remaining available; it is not an independent database migration. Provider-assisted mode still requires an OpenAI key on the Worker; the default rules demo needs no provider key.
+
+If a build still invokes Vinext, confirm Netlify is building the latest `main` commit and loading `netlify.toml`. The publish directory should remain `.next`, not `dist`.
