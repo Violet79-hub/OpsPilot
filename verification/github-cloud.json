@@ -1,0 +1,23 @@
+{
+  "run_id": 37706233144,
+  "commit_sha": "e2710d62e7f1cf06912fbb59ece04c431a1dc8de",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/Violet79-hub/OpsPilot/actions/runs/37706233144",
+  "updated_at": "2026-10-08T00:11:43Z",
+  "jobs": [
+    {
+      "id": 113081146621,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 113081146821,
+      "name": "container",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "16 release gates plus Docker build, container startup and health endpoint. Does not establish live LLM verification, production container hosting or browser UI QA."
+}

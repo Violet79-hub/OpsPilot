@@ -1,4 +1,8 @@
 # OpsPilot
+
+[![Verify OpsPilot](https://github.com/Violet79-hub/OpsPilot/actions/workflows/verify.yml/badge.svg)](https://github.com/Violet79-hub/OpsPilot/actions/workflows/verify.yml)
+
+**Cloud verification completed on 8 October 2026:** all 16 release gates and the separate Docker build/start/health-check job passed on commit `e2710d62e7f1cf06912fbb59ece04c431a1dc8de`. [Read the actual GitHub Actions run](https://github.com/Violet79-hub/OpsPilot/actions/runs/37706233144). Subsequent documentation-only changes do not alter that tested implementation. The `verification/` reports committed during import are local baseline evidence; fresh cloud reports are attached to the linked run.
 Evaluated financial complaint workflows with semantic retrieval, bounded tools, two saved ML models and human-controlled recommendations.
 
 Built by Hanxi Li (Alex), with AI-assisted implementation.
@@ -68,7 +72,7 @@ python scripts/release-pipeline.py --backend-python /path/to/backend/python --mo
 The fail-fast pipeline runs ESLint, type checking, model parity and reproducibility, API/D1/LangGraph regressions, Python tests, client session initialization, retrieval evaluation, official MCP SDK checks, production build and compiled-Worker end-to-end checks. Logs and measured durations are in `verification/`. Browser visual interaction remains unverified where the required browser tooling is unavailable.
 
 ## CI/CD and Docker
-`.github/workflows/verify.yml` runs the same gates plus a Docker build/start/health-check job when the source is placed in an authorised GitHub repository. It is configuration, not evidence of a completed cloud run. Current environment lacks Docker/Podman and user namespaces; no local container runtime pass is claimed.
+`.github/workflows/verify.yml` runs the same gates plus a Docker build/start/health-check job on pushes and pull requests in this repository. Both jobs have now executed successfully in GitHub Actions; see the verified run above. Docker was built and started on the GitHub runner, not in the original development environment.
 
 ```sh
 docker build -t opspilot-backend -f backend/Dockerfile .
@@ -79,7 +83,7 @@ docker run --rm -p 8000:8000 opspilot-backend
 The existing public Site serves the Worker with durable D1 bindings. Native Sites publication, not GitHub Actions, currently deploys it. Background execution uses Worker waitUntil, not a durable queue with guaranteed retries. Artifact hashes, shadow quality gates and a local rollback drill are implemented; local rollback uses two packages of the same model and is not a production rollback test.
 
 ## Cost, limitations and future work
-Node and total durations are measured. Provider tokens are recorded when returned; no real provider execution or verified provider pricing is available. Local mode has zero provider calls. Hosting costs are not measured. Remaining gaps: real provider evaluation, connected GitHub CI, executed Docker, independent browser QA, enterprise identity, durable job recovery, larger external retrieval labels and validation on actual escalation outcomes. Kubernetes is deliberately not prioritised.
+Node and total durations are measured. Provider tokens are recorded when returned; no real provider execution or verified provider pricing is available. Local mode has zero provider calls. Hosting costs are not measured. Remaining gaps: real provider evaluation, independent browser QA, enterprise identity, durable job recovery, larger external retrieval labels and validation on actual escalation outcomes. Kubernetes is deliberately not prioritised.
 
 ## AI usage disclosure
 AI assisted code, test and documentation development. Claims must be backed by this source and reproducible reports. Interview ownership should reflect engineering choices the author can explain and reproduce, not imply unaided implementation or production financial deployment.
